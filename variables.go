@@ -9,8 +9,15 @@ func main() {
 	// - What does that memory represent?
 
 	// Type can be specific such as int32 or int64.
-	// When we declare a type without being very specific, such as int, Go will choose it base on
-	// our architecture. Go has something called a word size, which matches our address size.
+	// For example,
+	// - uint8 contains a base 10  number using one byte of memory
+	// - int32 contains a base 10 number using 4 bytes of memory.
+
+	// When we declare a type without being very specific, such as uint or int, it is called
+	// predeclared integer. It get mapped based on the architecture we are building the code
+	// against. On a 64-bit OS, int will map to int64. Similarly, on a 32 bit OS, it becomes int32.
+
+	// Go has something called a word size, which matches our address size.
 	// For example, in 64-bit architecture, our word size is 64, address size is 64 then our
 	// integer should be 64.
 
@@ -24,8 +31,8 @@ func main() {
 	// - String "" (empty string)
 	// - Pointer nil
 
-	// String type
-	// String is a 2 word data structure: first word represent a pointer to a backing array, the
+	// Strings are a series of uint8 types.
+	// A string is a 2 word data structure: first word represent a pointer to a backing array, the
 	// second word represent it length.
 	// If it is a zero value then the first word is nil, the second word is 0
 
