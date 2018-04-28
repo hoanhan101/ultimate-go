@@ -1,6 +1,6 @@
 # Ultimate Go
 
-My notes while learning from [ArdanLabs's Ultimate Go course](https://github.com/ardanlabs/gotraining/blob/master/topics/courses/go/README.md).
+My notes on learning from [ArdanLabs's Ultimate Go course](https://github.com/ardanlabs/gotraining/blob/master/topics/courses/go/README.md).
 
 ## Project Status
 
@@ -15,9 +15,17 @@ My notes while learning from [ArdanLabs's Ultimate Go course](https://github.com
 ## Table of Contents 
 
 - [Design Philosophy](#design-philosophy)
-- [Language Syntax](#language-syntax)
-  - [Variables](#variables)
-  - [Struct](#struct)
+- [Language Mechanics](#language-mechanics)
+  - [Syntax](#syntax)
+    - Variable
+    - Struct
+    - Pointer
+    - Constant
+    - Function
+- Software Design
+- Concurrency
+- Testing and Profiling
+- Packages
 
 ## Design Philosophy
 
@@ -41,7 +49,9 @@ My notes while learning from [ArdanLabs's Ultimate Go course](https://github.com
   - Profile
   - Test
 
-## Language Syntax
+## Language Mechanics
 
-- [Variables](variables.go)
+### Syntax
+
+- [Variable](variable.go)
 - [Struct](struct.go)
