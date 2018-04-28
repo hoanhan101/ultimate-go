@@ -3,7 +3,6 @@ package main
 import "fmt"
 
 func main() {
-
 	// Type provides integrity and readability.
 	// - What is the amount of memory that we allocate?
 	// - What does that memory represent?
@@ -37,7 +36,6 @@ func main() {
 	// If it is a zero value then the first word is nil, the second word is 0
 
 	// var is the only guarantee to initialize a zero value for a type.
-
 	var a int
 	var b string
 	var c float64
@@ -49,7 +47,6 @@ func main() {
 	fmt.Printf("var d bool \t %T [%v]\n\n", d, d)
 
 	// Using the short variable declaration operator, we can define and initialize at the same time.
-
 	aa := 10
 	bb := "hello" // 1st word points to a array of characters, 2nd word is 5 bytes
 	cc := 3.14159
@@ -66,7 +63,6 @@ func main() {
 	// memory.
 
 	// Specify type and perform a conversion.
-
 	aaa := int32(10)
 
 	fmt.Printf("aaa := int32(10) %T [%v]\n", aaa, aaa)

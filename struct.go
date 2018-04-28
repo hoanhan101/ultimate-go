@@ -10,7 +10,6 @@ type example struct {
 }
 
 func main() {
-
 	// Declare a variable of type example set to its zero value.
 	// How much memory do we allocate for example?
 	// a bool is 1 byte, int16 is 2 byte, float32 is 4 byte
@@ -29,7 +28,6 @@ func main() {
 	// address 0, then the next int16 must start on address 2. The byte at address that get skipped
 	// over becomes a 1 byte padding. Similarly, if it is a 4 byte value then we will have a 3
 	// byte padding value.
-
 	var e1 example
 
 	// Display the value.
@@ -83,7 +81,6 @@ func main() {
 	// conversion.
 	// However, if ex is a value of identical anonymous struct type (like e3 above), then it is possible to
 	// assign ex1 = ex
-
 	var e4 example
 	e4 = e3
 

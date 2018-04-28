@@ -27,8 +27,8 @@ package main
 
 // user represents an user in the system.
 type user struct {
-    name  string
-    email string
+	name  string
+	email string
 }
 
 func main() {
@@ -42,19 +42,19 @@ func main() {
 	// Pass the "value of" count.
 	increment1(count)
 
-    // Printing out the result of count. Nothing is change.
+	// Printing out the result of count. Nothing is change.
 	println("count:\tValue Of[", count, "]\tAddr Of[", &count, "]")
 
 	// Pass the "address of" count.
 	// This is still considered pass by value, not by reference because the address itself is a value.
 	increment2(&count)
 
-    // Printing out the result of count. count is updated.
+	// Printing out the result of count. count is updated.
 	println("count:\tValue Of[", count, "]\tAddr Of[", &count, "]")
 
-    // Value semantic vs pointer semantic.
-    stayOnStack()
-    escapeToHeap()
+	// Value semantic vs pointer semantic.
+	stayOnStack()
+	escapeToHeap()
 }
 
 func increment1(inc int) {
@@ -63,7 +63,7 @@ func increment1(inc int) {
 	println("inc1:\tValue Of[", inc, "]\tAddr Of[", &inc, "]")
 }
 
-// increment2 declares count as a pointer variable whose value is always an address and points to 
+// increment2 declares count as a pointer variable whose value is always an address and points to
 // values of type int.
 // The * here is not an operator. It is part of the type name.
 // Every type that is declared, whether you declare or it is predeclared, you get for free a pointer.
@@ -78,33 +78,33 @@ func increment2(inc *int) {
 // Since we know the size of the user value at compiled time, the complier will put this on a stack
 // frame.
 func stayOnStack() user {
-    // In the stayOnStack stack frame, create a value and initialize it.
-    u := user{
-        name:  "Hoanh An",
-        email: "hoanhan@bennington.edu",
-    }
+	// In the stayOnStack stack frame, create a value and initialize it.
+	u := user{
+		name:  "Hoanh An",
+		email: "hoanhan@bennington.edu",
+	}
 
-    // Take the value and return it, pass back up to main stack frame.
-    return u
+	// Take the value and return it, pass back up to main stack frame.
+	return u
 }
 
 // escapeToHeap shows how the variable escape.
 func escapeToHeap() *user {
-    // In the escapeToHeap stack frame, create a value and initialize it.
-    u := user{
-        name:  "Hoanh An",
-        email: "hoanhan@bennington.edu",
-    }
+	// In the escapeToHeap stack frame, create a value and initialize it.
+	u := user{
+		name:  "Hoanh An",
+		email: "hoanhan@bennington.edu",
+	}
 
-    // Return the address, not the value. Want to share it up the call stack.
-    // Because of this, this value cannot be put on the stack frame but out in the heap.
-    // In the stayOnStack, we are passing a copy of the value itself, it is safe to 
-    // keep on the stack.
-    // But when we share something up the call stack like this, this memory is no longer gonna be
-    // valid when it get back to main. It must be put on the heap. What end up happen is that main
-    // will have a pointer to that memory on the heap.
+	// Return the address, not the value. Want to share it up the call stack.
+	// Because of this, this value cannot be put on the stack frame but out in the heap.
+	// In the stayOnStack, we are passing a copy of the value itself, it is safe to
+	// keep on the stack.
+	// But when we share something up the call stack like this, this memory is no longer gonna be
+	// valid when it get back to main. It must be put on the heap. What end up happen is that main
+	// will have a pointer to that memory on the heap.
 
-    // In fact, this allocation happens immediately on the heap.
-    // escapeToHeap has a pointer but u is based on value semantic.
-    return &u
+	// In fact, this allocation happens immediately on the heap.
+	// escapeToHeap has a pointer but u is based on value semantic.
+	return &u
 }
