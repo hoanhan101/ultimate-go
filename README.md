@@ -12,10 +12,12 @@ My notes while learning from [ArdanLabs's Ultimate Go course](https://github.com
 
 - [ ] Build a program to learn Go
 
-## Project Status
+## Table of Contents 
 
 - [Design Philosophy](#design-philosophy)
 - [Language Syntax](#language-syntax)
+  - [Variables](#variables)
+  - [Struct](#struct)
 
 ## Design Philosophy
 
@@ -42,3 +44,4 @@ My notes while learning from [ArdanLabs's Ultimate Go course](https://github.com
 ## Language Syntax
 
 - [Variables](variables.go)
+- [Struct](struct.go)
