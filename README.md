@@ -55,3 +55,4 @@ My notes on learning from [ArdanLabs's Ultimate Go course](https://github.com/ar
 
 - [Variable](variable.go)
 - [Struct](struct.go)
+- [Pointer](pointer.go)
