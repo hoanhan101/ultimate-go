@@ -57,3 +57,4 @@ My notes on learning from [ArdanLabs's Ultimate Go course](https://github.com/ar
 - [Struct](struct.go)
 - [Pointer](pointer.go)
 - [Constant](constant.go)
+- [Function](function.go)
