@@ -13,8 +13,8 @@ func main() {
 
 	// Declare a variable of type example set to its zero value.
 	// How much memory do we allocate for example?
-	// a bool is 1 byte, int16 is 2 byte, float32 is 4 byte
-	// Putting together, we have 7 byte. However, the actual answer is 8.
+	// a bool is 1 byte, int16 is 2 bytes, float32 is 4 bytes
+	// Putting together, we have 7 bytes. However, the actual answer is 8.
 	// That leads us to a new concept of padding and alignment.
 	// The padding byte is sitting between the bool and the int16. The reason is because of
 	// alignment.
@@ -24,11 +24,11 @@ func main() {
 	// people don't.
 
 	// Rule 1:
-	// Depending on the size a particular value, Go determines the alignment we need. Every 2 byte
-	// value must follow a 2 byte boundary. Since the bool value is only 1 byte and start at
+	// Depending on the size a particular value, Go determines the alignment we need. Every 2 bytes
+	// value must follow a 2 bytes boundary. Since the bool value is only 1 byte and start at
 	// address 0, then the next int16 must start on address 2. The byte at address that get skipped
-	// over becomes a 1 byte padding. Similarly, if it is a 4 byte value then we will have a 3
-	// byte padding value.
+	// over becomes a 1 byte padding. Similarly, if it is a 4 bytes value then we will have a 3
+	// bytes padding value.
 	var e1 example
 
 	// Display the value.
@@ -39,7 +39,7 @@ func main() {
 	// We need to minimize the amount of padding as possible. Always lay out the field
 	// from highest to smallest. This will push any padding down to the bottom.
 
-	// In this case, the entire struct size has to follow a 8 byte value because int64 is 8 byte.
+	// In this case, the entire struct size has to follow a 8 bytes value because int64 is 8 bytes.
 	// type example struct {
 	//     counter int64
 	//     pi      float32

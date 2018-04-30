@@ -13,13 +13,13 @@ func main() {
 	// - uint8 contains a base 10  number using one byte of memory
 	// - int32 contains a base 10 number using 4 bytes of memory.
 
-	// When we declare a type without being very specific, such as uint or int, it is called
-	// predeclared integer. It get mapped based on the architecture we are building the code
-	// against. On a 64-bit OS, int will map to int64. Similarly, on a 32 bit OS, it becomes int32.
+	// When we declare a type without being very specific, such as uint or int, it get mapped
+	// based on the architecture we are building the code against.
+	// On a 64-bit OS, int will map to int64. Similarly, on a 32 bit OS, it becomes int32.
 
-	// Go has something called a word size, which matches our address size.
-	// For example, in 64-bit architecture, our word size is 64, address size is 64 then our
-	// integer should be 64.
+	// The word size is the number of bytes in a word, which matches our address size.
+	// For example, in 64-bit architecture, the word size is 64 bit (8 bytes), address size is 64
+	// bit then our integer should be 64 bit.
 
 	// Zero value concept
 	// Every single value we create must be initialized. If we don't specify it, it will be set to
