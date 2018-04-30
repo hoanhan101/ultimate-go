@@ -1,16 +1,19 @@
 # Ultimate Go
 
-My notes on learning from [ArdanLabs's Ultimate Go course](https://github.com/ardanlabs/gotraining/blob/master/topics/courses/go/README.md).
+This repo contains my notes on learning Go and computer systems.
+
+**Resources:**
+- [Ardan Labs's Ultimate Go course
+  ](https://github.com/ardanlabs/gotraining/blob/master/topics/courses/go/README.md).
+- [Computer Systems: A Programmer's
+  Perspective](https://www.amazon.com/Computer-Systems-Programmers-Perspective-3rd/dp/013409266X)
 
 ## Project Status
 
 ### Tasks
 
-- [ ] Go through the training videos and source codes and learn as much as I can
-
-### Ideas
-
-- [ ] Build a program to learn Go
+- [ ] Finish Ultimate Go's training videos and reading resources.
+- [ ] Finish Computer System book
 
 ## Table of Contents 
 
