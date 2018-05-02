@@ -21,7 +21,6 @@ type updateStats struct {
 }
 
 func main() {
-
 	// Retrieve the user profile.
 	u, err := retrieveUser("Hoanh")
 	if err != nil {
@@ -48,14 +47,13 @@ func main() {
 // retrieveUser retrieves the user document for the specified user.
 // It takes a string type name and returns a pointer to a user type value and bool type error.
 func retrieveUser(name string) (*user, error) {
-
 	// Make a call to get the user in a json response.
 	r, err := getUser(name)
 	if err != nil {
 		return nil, err
 	}
 
-	// Unmarshal the json document into a value of the user struct type.
+    // Goal: Unmarshal the json document into a value of the user struct type.
 	// Create a value type user.
 	var u user
 
@@ -78,7 +76,6 @@ func getUser(name string) (string, error) {
 
 // updateUser updates the specified user document.
 func updateUser(u *user) (*updateStats, error) {
-
 	// response simulates a JSON response.
 	response := `{"Modified":1, "Duration":0.005, "Success" : true, "Message": "updated"}`
 
@@ -88,8 +85,7 @@ func updateUser(u *user) (*updateStats, error) {
 		return nil, err
 	}
 
-	// Check the update status to verify the update
-	// was Successful.
+	// Check the update status to verify the update is successful.
 	if us.Success != true {
 		return nil, errors.New(us.Message)
 	}

@@ -8,7 +8,6 @@ package main
 import "fmt"
 
 func main() {
-
 	// Constant can be typed or untyped.
 	// When it is untyped, we consider it as a kind.
 	// They are implicitly converted by the complier.

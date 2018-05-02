@@ -32,7 +32,6 @@ type user struct {
 }
 
 func main() {
-
 	// Declare variable of type int with a value of 10.
 	// This value is put on a stack with a value of 10.
 	count := 10

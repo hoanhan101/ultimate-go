@@ -3,7 +3,6 @@ package main
 import "fmt"
 
 func main() {
-
 	// Type provides integrity and readability.
 	// - What is the amount of memory that we allocate?
 	// - What does that memory represent?

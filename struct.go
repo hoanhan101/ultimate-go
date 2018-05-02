@@ -10,7 +10,6 @@ type example struct {
 }
 
 func main() {
-
 	// Declare a variable of type example set to its zero value.
 	// How much memory do we allocate for example?
 	// a bool is 1 byte, int16 is 2 bytes, float32 is 4 bytes
