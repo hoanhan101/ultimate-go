@@ -4,7 +4,7 @@ This repo contains my notes on learning Go and computer systems.
 
 **Resources:**
 - [Ardan Labs's Ultimate Go course
-  ](https://github.com/ardanlabs/gotraining/blob/master/topics/courses/go/README.md).
+  ](https://github.com/ardanlabs/gotraining/blob/master/topics/courses/go/README.md)
 - [Computer Systems: A Programmer's
   Perspective](https://www.amazon.com/Computer-Systems-Programmers-Perspective-3rd/dp/013409266X)
 
@@ -12,7 +12,7 @@ This repo contains my notes on learning Go and computer systems.
 
 ### Tasks
 
-- [ ] Finish Ultimate Go's training videos and reading resources.
+- [ ] Finish Ultimate Go's training videos and reading resources
 - [ ] Finish Computer System book
 
 ## Table of Contents 
@@ -20,15 +20,43 @@ This repo contains my notes on learning Go and computer systems.
 - [Design Philosophy](#design-philosophy)
 - [Language Mechanics](#language-mechanics)
   - [Syntax](#syntax)
-    - Variable
-    - Struct
-    - Pointer
-    - Constant
-    - Function
+    - [Variable](variable.go)
+    - [Struct](struct.go)
+    - [Pointer](pointer.go)
+    - [Constant](constant.go)
+    - [Function](function.go)
+  - Data Structures
+    - Array
+    - Slice
+    - Map
+  - Decoupling
+    - Method
+    - Interface
+    - Embedding
+    - Exporting
 - Software Design
+  - Composition
+  - Error Handling
+  - Packaging
 - Concurrency
+  - Mechanics
+    - Goroutine
+    - Data race
+    - Channel
+  - Patterns
+    - Context
+    - Pattern
 - Testing and Profiling
+  - Testing
+  - Benchmarking
+  - Fuzzing
+  - Profiling
 - Packages
+  - Context
+  - Encoding
+  - IO
+  - Logging
+  - Reflection
 
 ## Design Philosophy
 
