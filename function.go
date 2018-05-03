@@ -53,7 +53,7 @@ func retrieveUser(name string) (*user, error) {
 		return nil, err
 	}
 
-    // Goal: Unmarshal the json document into a value of the user struct type.
+	// Goal: Unmarshal the json document into a value of the user struct type.
 	// Create a value type user.
 	var u user
 

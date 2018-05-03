@@ -6,13 +6,14 @@
 
 // When this program starts up, the runtime creates a Go routine.
 // Every Go routine is a separate path of execution that contains instructions that needed to be executed by
-// the machine. Can also think of it as thread.
+// the machine. Can also think of Go routine as a lightweight thread.
 // This program has only 1 Go routine: the main Go routine.
 
 // Every Go routine is given a block of memory, called the stack.
 // The stack memory in Go starts out at 2K. It is very small. It can change over time.
 // Every time a function is called, a piece of stack is used to help that function run.
-// The direction of the stack is downward.
+// The growing direction of the stack is downward.
+
 // Every function is given a stack frame, memory execution of a function.
 // The size of every stack frame is known at compiled time. No value can be placed on a stack
 // unless the compiler knows its size ahead of time.
