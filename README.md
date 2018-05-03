@@ -18,40 +18,40 @@ This repo contains my notes on learning Go and computer systems.
 ## Table of Contents 
 
 - [Design Philosophy](DESIGN.md)
-- Language Mechanics
-  - Syntax
+- **Language Mechanics**
+  - **Syntax**
     - [Variable](variable.go)
     - [Struct](struct.go)
     - [Pointer](pointer.go)
     - [Constant](constant.go)
     - [Function](function.go)
-  - Data Structures
-    - Array
+  - **Data Structures**
+    - [Array](array.go)
     - Slice
     - Map
-  - Decoupling
+  - **Decoupling**
     - Method
     - Interface
     - Embedding
     - Exporting
-- Software Design
+- **Software Design**
   - Composition
   - Error Handling
   - Packaging
-- Concurrency
-  - Mechanics
+- **Concurrency**
+  - **Mechanics**
     - Goroutine
     - Data race
     - Channel
-  - Patterns
+  - **Patterns**
     - Context
     - Pattern
-- Testing and Profiling
+- **Testing and Profiling**
   - Testing
   - Benchmarking
   - Fuzzing
   - Profiling
-- Packages
+- **Packages**
   - Context
   - Encoding
   - IO

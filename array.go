@@ -4,7 +4,7 @@
 // Cores DO NOT access main memory directly but their local caches.
 // What store in caches are data and instruction.
 
-// Cache speed from fastest to slowest: L1 -> L2 -> L3 -> main memory
+// Cache speed from fastest to slowest: L1 -> L2 -> L3 -> main memory.
 // Scott Meyers: "If performance matter then the total memeory you have is the total amount of
 // caches" -> access to main memory is incredibly slow; practically speaking it might not even be there.
 
@@ -54,7 +54,7 @@
 // In the Column Traverse, not only we have cache misses, we probably have a TLB cache miss on
 // every access as well.
 
-// Data-oriented design matters
+// Data-oriented design matters.
 // It is not enough to write the most efficient algorithm, how we access our data can have much
 // more lasting effect on the performance than the algorithm itself.
 
