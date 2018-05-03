@@ -17,7 +17,7 @@ This repo contains my notes on learning Go and computer systems.
 
 ## Table of Contents 
 
-- [Design Philosophy](DESIGN.md)
+- [**Design Philosophy**](DESIGN.md)
 - **Language Mechanics**
   - **Syntax**
     - [Variable](variable.go)
