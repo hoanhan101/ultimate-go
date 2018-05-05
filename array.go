@@ -63,5 +63,109 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("ok")
+	// Declare an array of five strings that is initialized to its zero value.
+    // Recap: a string is a 2 word data structure: a pointer and a length
+    // Since this array is set to its zero value, every string in this array is also set to its
+    // zero value, which means that each string has the first word pointed to nil and 
+    // second word is 0.
+    //  -----------------------------
+    // | nil | nil | nil | nil | nil |
+    //  -----------------------------
+    // |  0  |  0  |  0  |  0  |  0  |
+    //  -----------------------------
+	var strings [5]string
+
+    // At index 0, a string now has a pointer to a backing array of bytes (characters in string)
+    // and its length is 5.
+
+    // What is the cost?
+    // The cost of this assignment is the cost of copying 2 bytes.
+    // We have two string values that have pointers to the same backing array of bytes.
+    // Therefore, the cost of this assignment is just 2 words.
+
+    //  -----         -------------------
+    // |  *  |  ---> | A | p | p | l | e | (1)
+    //  -----         -------------------
+    // |  5  |                  A
+    //  -----                   |
+    //                          |
+    //                          |
+    //     ---------------------
+    //    |
+    //  -----------------------------
+    // |  *  | nil | nil | nil | nil |
+    //  -----------------------------
+    // |  5  |  0  |  0  |  0  |  0  |
+    //  -----------------------------
+	strings[0] = "Apple"
+	strings[1] = "Orange"
+	strings[2] = "Banana"
+	strings[3] = "Grape"
+	strings[4] = "Plum"
+
+
+	// Iterate over the array of strings.
+    // Using range, not only we can get the index but also a copy of the value in the array.
+    // fruit is now a string value; its scope is within the for statement.
+    // In the first iteration, we have the word "Apple". It is a string that has the first word
+    // also points to (1) and the second word is 5.
+    // So we now have 3 different string value all sharing the same backing array.
+
+    // What are we passing to the Println function?
+    // We are using value semantic here. We are not sharing our string value. Println is getting
+    // its own copy, its own string value. It means when we get to the Println call, there are now
+    // 4 string values all sharing the same backing array.
+
+    // We don't want to take an address of a string.
+    // We know the size of a string ahead of time.
+    // -> it has the ability to be on the stack
+    // -> not creating allocation
+    // -> not causing pressure on the GC
+    // -> the string has been designed to leverage value mechanic, to stay on the stack, out of the
+    // way of creating garbage.
+    // -> the only thing that has to be on the heap, if anything is the backing array, which is the
+    // one thing that being shared
+	for i, fruit := range strings {
+		fmt.Println(i, fruit)
+	}
+
+	// Declare an array of 4 integers that is initialized with some values using literal syntax.
+	numbers := [4]int{10, 20, 30, 40}
+
+	// Iterate over the array of numbers using traditional style.
+	for i := 0; i < len(numbers); i++ {
+		fmt.Println(i, numbers[i])
+	}
+
+    // Different type arrays
+	// Declare an array of 5 integers that is initialized to its zero value.
+	var five [5]int
+
+	// Declare an array of 4 integers that is initialized with some values.
+	four := [4]int{10, 20, 30, 40}
+
+    fmt.Println(five)
+    fmt.Println(four)
+
+    // When we try to assign four to five like so five = four, the compiler says that
+    // "cannot use four (type [4]int) as type [5]int in assignment"
+    // This cannot happen because they have different types (size and representation).
+    // The size of an array makes up its type name: [4]int vs [5]int. Just like what we've seen
+    // with pointer. The * in *int is not an operator but part of the type name.
+
+    // Unsurprisingly, all array has known size at compiled time.
+
+    // Contiguous memory allocations
+	// Declare an array of 5 strings initialized with values.
+	six := [6]string{"Annie", "Betty", "Charley", "Doug", "Edward", "Hoanh"}
+
+	// Iterate over the array displaying the value and address of each element.
+    // By looking at the output of this Printf function, we can see that this array is truly a
+    // contiguous block of memory. We know a string is 2 word and depending on computer
+    // architecture, it will have x byte. The distance between two consecutive IndexAddr is exactly
+    // x byte.
+    // v is its own variable on the stack and it has the same address every single time.
+	for i, v := range six {
+		fmt.Printf("Value[%s]\tAddress[%p] IndexAddr[%p]\n", v, &v, &six[i])
+	}
 }
