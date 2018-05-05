@@ -28,7 +28,7 @@ This repo contains my notes on learning Go and computer systems.
   - **Data Structures**
     - [Array](array.go)
     - [Slice](slice.go)
-    - Map
+    - [Map](map.go)
   - **Decoupling**
     - Method
     - Interface
