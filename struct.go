@@ -10,6 +10,10 @@ type example struct {
 }
 
 func main() {
+	// ----------------------
+	// Declare and initialize
+	// ----------------------
+
 	// Declare a variable of type example set to its zero value.
 	// How much memory do we allocate for example?
 	// a bool is 1 byte, int16 is 2 bytes, float32 is 4 bytes
@@ -74,7 +78,10 @@ func main() {
 	fmt.Println("Counter", e3.counter)
 	fmt.Println("Pi", e3.pi)
 
+	// ---------------------------
 	// Name type vs anonymous type
+	// ---------------------------
+
 	// If we have two name type identical struct, we can't assign one to another.
 	// For example, example1 and example2 are identical struct, var ex1 example1, var ex2 example2.
 	// ex1 = ex2 is not allowed. We have to explicitly say that ex1 = example2(ex2) by performing a

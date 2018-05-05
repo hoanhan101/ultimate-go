@@ -8,6 +8,10 @@ package main
 import "fmt"
 
 func main() {
+	// ----------------------
+	// Declare and initialize
+	// ----------------------
+
 	// Constant can be typed or untyped.
 	// When it is untyped, we consider it as a kind.
 	// They are implicitly converted by the complier.
@@ -68,7 +72,10 @@ func main() {
 	// Will NOT compile because it exceeds 64 bit
 	// const biggerInt int64 = 9223372036854775808543522345
 
+	// ----
 	// iota
+	// ----
+
 	const (
 		A1 = iota // 0 : Start at 0
 		B1 = iota // 1 : Increment by 1

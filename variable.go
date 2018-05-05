@@ -3,6 +3,10 @@ package main
 import "fmt"
 
 func main() {
+	// --------------
+	// Built-in types
+	// --------------
+
 	// Type provides integrity and readability.
 	// - What is the amount of memory that we allocate?
 	// - What does that memory represent?
@@ -20,7 +24,10 @@ func main() {
 	// For example, in 64-bit architecture, the word size is 64 bit (8 bytes), address size is 64
 	// bit then our integer should be 64 bit.
 
+	// ------------------
 	// Zero value concept
+	// ------------------
+
 	// Every single value we create must be initialized. If we don't specify it, it will be set to
 	// the zero value. The entire allocation of memory, we reset that bit to 0.
 	// - Boolean false
@@ -34,6 +41,10 @@ func main() {
 	// A string is a 2 word data structure: first word represent a pointer to a backing array, the
 	// second word represent it length.
 	// If it is a zero value then the first word is nil, the second word is 0
+
+	// ----------------------
+	// Declare and initialize
+	// ----------------------
 
 	// var is the only guarantee to initialize a zero value for a type.
 	var a int
@@ -57,7 +68,10 @@ func main() {
 	fmt.Printf("cc := 3.14159 \t %T [%v]\n", cc, cc)
 	fmt.Printf("dd := true \t %T [%v]\n\n", dd, dd)
 
+	// ---------------------
 	// Conversion vs casting
+	// ---------------------
+
 	// Go doesn't have casting, but conversion.
 	// Instead of telling a compiler to pretend to have some more bytes, we have to allocate more
 	// memory.

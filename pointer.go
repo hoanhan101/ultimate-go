@@ -1,4 +1,7 @@
+// ----------------------------------
 // Everything is about pass by value.
+// ----------------------------------
+
 // Pointer serves only 1 purpose: sharing.
 // Pointer shares values across the program boundary.
 // There are several types of program boundary. The most common one is between function calls.
@@ -33,6 +36,10 @@ type user struct {
 }
 
 func main() {
+	// -------------
+	// Pass by value
+	// -------------
+
 	// Declare variable of type int with a value of 10.
 	// This value is put on a stack with a value of 10.
 	count := 10
@@ -53,7 +60,10 @@ func main() {
 	// Printing out the result of count. count is updated.
 	println("count:\tValue Of[", count, "]\tAddr Of[", &count, "]")
 
-	// Value semantic vs pointer semantic.
+	// ---------------
+	// Escape analysis
+	// ---------------
+
 	stayOnStack()
 	escapeToHeap()
 }
