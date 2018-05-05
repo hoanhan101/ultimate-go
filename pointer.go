@@ -2,14 +2,14 @@
 // Pointer serves only 1 purpose: sharing.
 // Pointer shares values across the program boundary.
 // There are several types of program boundary. The most common one is between function calls.
-// We can also have a boundary between Go routines when we will discuss it later.
+// We can also have a boundary between Goroutines when we will discuss it later.
 
-// When this program starts up, the runtime creates a Go routine.
-// Every Go routine is a separate path of execution that contains instructions that needed to be executed by
-// the machine. Can also think of Go routine as a lightweight thread.
-// This program has only 1 Go routine: the main Go routine.
+// When this program starts up, the runtime creates a Goroutine.
+// Every Goroutine is a separate path of execution that contains instructions that needed to be executed by
+// the machine. Can also think of Goroutine as a lightweight thread.
+// This program has only 1 Goroutine: the main Goroutine.
 
-// Every Go routine is given a block of memory, called the stack.
+// Every Goroutine is given a block of memory, called the stack.
 // The stack memory in Go starts out at 2K. It is very small. It can change over time.
 // Every time a function is called, a piece of stack is used to help that function run.
 // The growing direction of the stack is downward.
@@ -90,22 +90,72 @@ func stayOnStack() user {
 }
 
 // escapeToHeap shows how the variable escape.
+// This looks almost identical to the stayOnStack function.
+// It creates a value of type user and initialize it. It seems like we are doing the same here.
+// However, there is one subtle difference: we do not return the value itself but the address
+// of u. That is the value that is being passed back up the call stack. We are using pointer
+// semantic.
+
+// You might think about what we have after this call is: main has a pointer to a value that is
+// on a stack frame below. It is the case then we are in trouble.
+// Once we come back up the call stack, this memory is there but it is reusable again. It is no
+// longer valid. Anytime now main makes a function call, we need to allocate the frame and
+// initialize it. 
+
+// Think about zero value for a second here. It is enable to us to initialize every stack frame that
+// we take. Stack are self cleaning. We clean our stack on the way down. Every time we make a
+// function call, zero value, initialization, we are cleaning those stack frames. We leave that
+// memory on the way up because we don't know if we need that again.
+
+// Back to the example, it is bad because it looks like we take the address of user value, pass it
+// bacl up to the call stack and we now have a pointer which is about to get erased. Therefore, it
+// is not what will happen.
+
+// What actually going to happen is the idea of escape analysis.
+// Because of line "return &u", this value cannot be put inside the stack frame for this function
+// so we have to put it out on the heap.
+// Escape analysis decides what stay on stack and what not.
+// In the stayOnStack function, because we are passing the copy of the value itself, it is safe to
+// keep these things on the stack. But when we SHARE something above the call stack like this,
+// escape analysis said this memory is no longer be valid when we get back to main, we must put it
+// out there on the heap. main is end up having a pointer to the heap.
+// In fact, this allocation happens immediately on the heap. escapeToHeap is gonna have a pointer
+// to the heap. But u is gonna base on value semantic.
 func escapeToHeap() *user {
-	// In the escapeToHeap stack frame, create a value and initialize it.
 	u := user{
 		name:  "Hoanh An",
 		email: "hoanhan@bennington.edu",
 	}
 
-	// Return the address, not the value. Want to share it up the call stack.
-	// Because of this, this value cannot be put on the stack frame but out in the heap.
-	// In the stayOnStack, we are passing a copy of the value itself, it is safe to
-	// keep on the stack.
-	// But when we share something up the call stack like this, this memory is no longer gonna be
-	// valid when it get back to main. It must be put on the heap. What end up happen is that main
-	// will have a pointer to that memory on the heap.
-
-	// In fact, this allocation happens immediately on the heap.
-	// escapeToHeap has a pointer but u is based on value semantic.
 	return &u
 }
+
+// What if we run out of stack space? 
+// What happen next is during that function call, there is a little preamble that asks "Do we have
+// enough stack space? for this frame?". If yes then no problem because at complied time we know
+// the size of every frame. If no, we have to have bigger frame and these values need to be copy
+// over. The memory on that stack move. It is a trade off. We have to take the cost of this copy
+// because it doesn't happen a lot. The benefit of using less memory any Goroutine outrace the
+// cost.
+
+// Because stack can grow, no Goroutine can have a pointer to some other Goroutine stack.
+// There would be too much overhead for complier to keep track of every pointer. The latency will
+// be insane.
+// -> The stack for a Goroutine is only for that Goroutine only. It cannot be shared between
+// Goroutine.
+
+// Once something is moved to the heap, Garbage Collection has to get in.
+// The most important thing about the Garbage Collector (GC) is the pacinng algorithm.
+// It determines the frequency/pace that the GC has to run in order to maintain the smallest t as
+// possible.
+
+// Image a program where you have a 4 MB heap. GC is trying to maintain a live heap of 2 MB.
+// If the live heap grow pass 4 MB we have allocate a larger heap.
+// Depending how fast the heap grow, we determine the pace that the GC has to run. The smaller the
+// pace, the less impact it is going to have. The goal is to get the live heap back down.
+
+// When the GC is running, we have to take a performance cost so all Goroutine can keep running
+// concurrently. The GC also have a group of Goroutine that perform the garbage collection work.
+// It takes 25% of our available CPU capacity to itself.
+// More details about GC and pacing algorithm can be find at:
+// https://github.com/ardanlabs/gotraining/blob/master/topics/go/language/pointers/README.md
