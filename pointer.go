@@ -100,7 +100,7 @@ func stayOnStack() user {
 // on a stack frame below. It is the case then we are in trouble.
 // Once we come back up the call stack, this memory is there but it is reusable again. It is no
 // longer valid. Anytime now main makes a function call, we need to allocate the frame and
-// initialize it. 
+// initialize it.
 
 // Think about zero value for a second here. It is enable to us to initialize every stack frame that
 // we take. Stack are self cleaning. We clean our stack on the way down. Every time we make a
@@ -130,7 +130,7 @@ func escapeToHeap() *user {
 	return &u
 }
 
-// What if we run out of stack space? 
+// What if we run out of stack space?
 // What happen next is during that function call, there is a little preamble that asks "Do we have
 // enough stack space? for this frame?". If yes then no problem because at complied time we know
 // the size of every frame. If no, we have to have bigger frame and these values need to be copy

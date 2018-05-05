@@ -16,9 +16,15 @@ func main() {
 	const ui = 12345    // kind: integer
 	const uf = 3.141592 // kind: floating-point
 
+	fmt.Println(ui)
+	fmt.Println(uf)
+
 	// Typed Constants still use the constant type system but their precision is restricted.
 	const ti int = 12345        // type: int
 	const tf float64 = 3.141592 // type: float64
+
+	fmt.Println(ti)
+	fmt.Println(tf)
 
 	// This doesn't work because constant 1000 overflows uint8.
 	// const myUint8 uint8 = 1000
@@ -30,23 +36,34 @@ func main() {
 	// Variable answer will of type float64.
 	var answer = 3 * 0.333 // KindFloat(3) * KindFloat(0.333)
 
+	fmt.Println(answer)
+
 	// Constant third will be of kind floating point.
 	const third = 1 / 3.0 // KindFloat(1) / KindFloat(3.0)
 
+	fmt.Println(third)
+
 	// Constant zero will be of kind integer.
 	const zero = 1 / 3 // KindInt(1) / KindInt(3)
+
+	fmt.Println(zero)
 
 	// This is an example of constant arithmetic between typed and
 	// untyped constants. Must have like types to perform math.
 	const one int8 = 1
 	const two = 2 * one // int8(2) * int8(1)
 
+	fmt.Println(one)
+	fmt.Println(two)
+
 	// Max integer value on 64 bit architecture.
 	const maxInt = 9223372036854775807
 
+	fmt.Println(maxInt)
+
 	// Much larger value than int64 but still compile because of untyped system.
-	// 256 is a lot of space.
-	const bigger = 9223372036854775808543522345
+	// 256 is a lot of space (depending on the architecture)
+	// const bigger = 9223372036854775808543522345
 
 	// Will NOT compile because it exceeds 64 bit
 	// const biggerInt int64 = 9223372036854775808543522345
