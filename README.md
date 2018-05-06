@@ -1,6 +1,10 @@
 # Ultimate Go
 
-This repo contains my notes on learning Go and computer systems.
+This repo contains my notes on learning Go and computer systems. Different people have different
+learning style. For me, I learn best by doing and walking through examples. Hence, I am trying to
+take notes carefully and comment directly on the source code, rather than writing up Markdown
+files. That way, I can understand every single line of code as I am reading and also be mindful of
+the theories behind the scene.
 
 **Resources:**
 - [Ardan Labs's Ultimate Go course
@@ -10,10 +14,10 @@ This repo contains my notes on learning Go and computer systems.
 
 ## Project Status
 
-### Tasks
+It is an on-going project. 
 
-- [ ] Finish Ultimate Go's training videos and reading resources
-- [ ] Finish Computer System book
+Below are the outline of the all topics. Normally, a topic is covered when there is a link, 
+or several links next to it.
 
 ## Table of Contents 
 
