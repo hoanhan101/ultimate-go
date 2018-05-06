@@ -30,7 +30,7 @@ This repo contains my notes on learning Go and computer systems.
     - [Slice](slice.go)
     - [Map](map.go)
   - **Decoupling**
-    - Method
+    - Method: [1](method1.go) | [2](method2.go)
     - Interface
     - Embedding
     - Exporting
