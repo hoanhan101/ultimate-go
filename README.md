@@ -20,17 +20,17 @@ This repo contains my notes on learning Go and computer systems.
 - [**Design Philosophy**](DESIGN.md)
 - **Language Mechanics**
   - **Syntax**
-    - [Variable](variable.go)
-    - [Struct](struct.go)
-    - [Pointer](pointer.go)
-    - [Constant](constant.go)
-    - [Function](function.go)
+    - Variable: [variable.go](variable.go)
+    - Struct: [struct.go](struct.go)
+    - Pointer: [pointer.go](pointer.go)
+    - Constant: [constant.go](constant.go)
+    - Function: [function.go](function.go)
   - **Data Structures**
-    - [Array](array.go)
-    - [Slice](slice.go)
-    - [Map](map.go)
+    - Array: [array.go](array.go)
+    - Slice: [slice.go](slice.go)
+    - Map: [map.go](map.go)
   - **Decoupling**
-    - Method: [Part 1](method1.go) | [Part 2](method2.go)
+    - Method: [method1.go](method1.go) | [method2.go](method2.go) | [method3.go](method3.go)
     - Interface
     - Embedding
     - Exporting
