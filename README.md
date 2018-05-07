@@ -34,7 +34,7 @@ or several links next to it.
     - Slice: [slice.go](slice.go)
     - Map: [map.go](map.go)
   - **Decoupling**
-    - Method: [method1.go](method1.go) | [method2.go](method2.go) | [method3.go](method3.go)
+    - Method: [method_1.go](method_1.go) | [method_2.go](method_2.go) | [method_3.go](method_3.go)
     - Interface
     - Embedding
     - Exporting
