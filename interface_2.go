@@ -22,6 +22,14 @@ func (u *user) notify() {
 	fmt.Printf("Sending User Email To %s<%s>\n", u.name, u.email)
 }
 
+// String implements the fmt.Springer interface.
+// The fmt package that we've been using to display things on the screen, if it receive a piece of
+// data that implement this behavior, it will use this behavior and overwrite its default.
+// Since we are using pointer semantic, only pointer satisfies the interface.
+func (u *user) String() string {
+	return fmt.Sprintf("My name is %q and my email is %q", u.name, u.email)
+}
+
 func main() {
 	// Create a value of type User
 	u := user{"Hoanh", "hoanhan@bennington.edu"}
@@ -100,6 +108,11 @@ func main() {
 	// |   *   | --> original user value
 	//  -------
 	sendNotification(&u)
+
+	// Similarly, when we pass a value of u to Println, in the output we only see the default
+	// formatting. When we pass the address through, it now can overwrite it.
+	fmt.Println(u)
+	fmt.Println(&u)
 }
 
 // This is our polymorphic function.
