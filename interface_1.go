@@ -62,7 +62,7 @@ type pipe struct {
 
 // read implements the reader interface for a network connection.
 func (pipe) read(b []byte) (int, error) {
-	s := `{name: "bill", title: "developer"}`
+	s := `{name: "hoanh", title: "developer"}`
 	copy(b, s)
 	return len(s), nil
 }
@@ -118,6 +118,15 @@ func main() {
 
 	// The behavior changes because the data changes.
 	retrieve(p)
+
+	// Important note:
+	// Later on, for simplicity, instead of drawing the a pointer pointing to iTable, we only draw
+	// *pipe, like so:
+	//  -------
+	// | *pipe |
+	//  -------
+	// |   *   |  --> p copy
+	//  -------
 }
 
 // retrieve can read any device and process the data.
