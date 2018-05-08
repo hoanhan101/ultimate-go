@@ -35,7 +35,7 @@ or several links next to it.
     - Map: [map.go](map.go)
   - **Decoupling**
     - Method: [method_1.go](method_1.go) | [method_2.go](method_2.go) | [method_3.go](method_3.go)
-    - Interface
+    - Interface: [interface_1.go](interface_1.go)
     - Embedding
     - Exporting
 - **Software Design**
