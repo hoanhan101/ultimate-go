@@ -7,10 +7,20 @@ type notifier interface {
 	notify()
 }
 
+// printer displays information
+type printer interface {
+	print()
+}
+
 // user defines a user in the program.
 type user struct {
 	name  string
 	email string
+}
+
+// print displays user's name and email
+func (u user) print() {
+	fmt.Printf("My name is %s and my email is %s\n", u.name, u.email)
 }
 
 // ------------------------------
@@ -32,7 +42,7 @@ func (u *user) String() string {
 
 func main() {
 	// Create a value of type User
-	u := user{"Hoanh", "hoanhan@bennington.edu"}
+	u := user{"Hoanh", "hoanhan@email.com"}
 
 	// Call polymorphic function but passing u using value semantic: sendNotification(u).
 	// However, the compiler doesn't allow it:
@@ -113,6 +123,43 @@ func main() {
 	// formatting. When we pass the address through, it now can overwrite it.
 	fmt.Println(u)
 	fmt.Println(&u)
+
+	// ------------------
+	// Slice of interface
+	// ------------------
+
+	// Create a slice of interface value.
+	// It means that I can store in this dataset any value or pointer that impleement the printer
+	// interface.
+
+	//   index 0   index 1
+	//  -------------------
+	// |   User  |  *User  |
+	//  -------------------
+	// |    *    |    *    |
+	//  -------------------
+	//      A         A
+	//      |         |
+	//     copy    original
+
+	entities := []printer{
+		// When we store a value, the interface value has its own copy of the value.
+		// Changes to the original value will not be seen.
+		u,
+
+		// When we store a pointer, the interface value has its own copy of the address.
+		// Changes to the original value will be seen.
+		&u,
+	}
+
+	// Change the name and email on the user value.
+	u.name = "Hoanh An"
+	u.email = "hoanhan@bennington.edu"
+
+	// Iterate over the slice of entities and call print against the copied interface value.
+	for _, e := range entities {
+		e.print()
+	}
 }
 
 // This is our polymorphic function.
