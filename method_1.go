@@ -38,9 +38,9 @@ func main() {
 	bill.changeEmail("bill@hotmail.com")
 
 	// Pointers of type user can also be used to call methods declared with both value and pointer receiver.
-	joan := &user{"Joan", "joan@email.com"}
+	joan := &user{"Hoanh", "hoanhan@email.com"}
 	joan.notify()
-	joan.changeEmail("joan@hotmail.com")
+	joan.changeEmail("hoanhan@bennington.edu")
 
 	// joan in this example is a pointer that has the type *user. We are still able to call notify.
 	// This is still correct. As long as we deal with the type user, Go can adjust to make the call.
@@ -54,7 +54,7 @@ func main() {
 	// Create a slice of user values with two users.
 	users := []user{
 		{"bill", "bill@email.com"},
-		{"joan", "joan@email.com"},
+		{"hoanh", "hoanh@email.com"},
 	}
 
 	// We are ranging over this slice of values, making a copy of each value and call notify to

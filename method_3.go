@@ -34,14 +34,14 @@ func main() {
 
 	// Declare a variable of type data.
 	d := data{
-		name: "Bill",
+		name: "Hoanh",
 	}
 
 	fmt.Println("Proper Calls to Methods:")
 
 	// How we actually call methods in Go.
 	d.displayName()
-	d.setAge(45)
+	d.setAge(21)
 
 	fmt.Println("\nWhat the Compiler is Doing:")
 
@@ -54,7 +54,7 @@ func main() {
 	// Similar to d.setAge(45). Go is calling a function that based on the pointer receiver and
 	// passing data to its parameters. We are adjusting to make the call by taking the address of d.
 	data.displayName(d)
-	(*data).setAge(&d, 45)
+	(*data).setAge(&d, 21)
 
 	// -----------------
 	// Function variable
@@ -103,11 +103,11 @@ func main() {
 	//  -----
 	// |  *  | --> d
 	//  -----
-	f2(45)
+	f2(21)
 
 	// Change the value of d.
 	d.name = "Sammy"
 
 	// Call the method via the variable. We see the change.
-	f2(45)
+	f2(21)
 }
