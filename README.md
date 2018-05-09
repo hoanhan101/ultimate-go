@@ -21,23 +21,23 @@ or several links next to it.
 
 ## Table of Contents 
 
-- **Design Philosophy**: [DESIGN.md](DESIGN.md)
+- **Design Philosophy**: [go/README.md](go/README.md)
 - **Language Mechanics**
   - **Syntax**
-    - Variable: [variable.go](variable.go)
-    - Struct: [struct.go](struct.go)
-    - Pointer: [pointer.go](pointer.go)
-    - Constant: [constant.go](constant.go)
-    - Function: [function.go](function.go)
+    - Variable: [variable.go](go/language/variable.go)
+    - Struct: [struct.go](go/language/struct.go)
+    - Pointer: [pointer.go](go/language/pointer.go)
+    - Constant: [constant.go](go/language/constant.go)
+    - Function: [function.go](go/language/function.go)
   - **Data Structures**
-    - Array: [array.go](array.go)
-    - Slice: [slice.go](slice.go)
-    - Map: [map.go](map.go)
+    - Array: [array.go](go/language/array.go)
+    - Slice: [slice.go](go/language/slice.go)
+    - Map: [map.go](go/language/map.go)
   - **Decoupling**
-    - Method: [method_1.go](method_1.go) | [method_2.go](method_2.go) | [method_3.go](method_3.go)
-    - Interface: [interface_1.go](interface_1.go) | [interface_2.go](interface_2.go)
-    - Embedding: [embedding_1.go](embedding_1.go) | [embedding_2.go](embedding_2.go) |
-      [embedding_3.go](embedding_3.go) | [embedding_4.go](embedding_4.go)
+    - Method: [method_1.go](go/language/method_1.go) | [method_2.go](go/language/method_2.go) | [method_3.go](go/language/method_3.go)
+    - Interface: [interface_1.go](go/language/interface_1.go) | [interface_2.go](go/language/interface_2.go)
+    - Embedding: [embedding_1.go](go/language/embedding_1.go) | [embedding_2.go](go/language/embedding_2.go) |
+      [embedding_3.go](go/language/embedding_3.go) | [embedding_4.go](go/language/embedding_4.go)
     - Exporting
 - **Software Design**
   - Composition
