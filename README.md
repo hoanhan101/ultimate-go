@@ -24,24 +24,24 @@ or several links next to it.
 - **Design Philosophy**: [Guideline](go/README.md)
 - **Language Mechanics**
   - **Syntax**
-    - Variable: [variable.go](go/language/variable.go)
-    - Struct: [struct.go](go/language/struct.go)
-    - Pointer: [pointer.go](go/language/pointer.go)
-    - Constant: [constant.go](go/language/constant.go)
-    - Function: [function.go](go/language/function.go)
+    - Variable: [Part 1-end](go/language/variable.go)
+    - Struct: [Part 1-end](go/language/struct.go)
+    - Pointer: [Part 1-end](go/language/pointer.go)
+    - Constant: [Part 1-end](go/language/constant.go)
+    - Function: [Part 1-end](go/language/function.go)
   - **Data Structures**
-    - Array: [array.go](go/language/array.go)
-    - Slice: [slice.go](go/language/slice.go)
-    - Map: [map.go](go/language/map.go)
+    - Array: [Part 1-end](go/language/array.go)
+    - Slice: [Part 1-end](go/language/slice.go)
+    - Map: [Part 1-end](go/language/map.go)
   - **Decoupling**
-    - Method: [method_1.go](go/language/method_1.go) | [method_2.go](go/language/method_2.go) | 
-      [method_3.go](go/language/method_3.go)
-    - Interface: [interface_1.go](go/language/interface_1.go) | [interface_2.go](go/language/interface_2.go)
-    - Embedding: [embedding_1.go](go/language/embedding_1.go) | [embedding_2.go](go/language/embedding_2.go) |
-      [embedding_3.go](go/language/embedding_3.go) | [embedding_4.go](go/language/embedding_4.go)
-    - Exporting: [Guideline](go/language/exporting/README.md) | [exporting_1](go/language/exporting/exporting_1) | 
-      [exporting_2](go/language/exporting/exporting_2) | [exporting_3](go/language/exporting/exporting_3) | 
-      [exporting_4](go/language/exporting/exporting_4)
+    - Method: [Part 1](go/language/method_1.go) | [Part 2](go/language/method_2.go) | 
+      [Part 3-end](go/language/method_3.go)
+    - Interface: [Part 1](go/language/interface_1.go) | [Part 2-end](go/language/interface_2.go)
+    - Embedding: [Part 1](go/language/embedding_1.go) | [Part 2](go/language/embedding_2.go) |
+      [Part 3](go/language/embedding_3.go) | [Part 4-end](go/language/embedding_4.go)
+    - Exporting: [Guideline](go/language/exporting/README.md) | [Part 1](go/language/exporting/exporting_1) | 
+      [Part 2](go/language/exporting/exporting_2) | [Part 3](go/language/exporting/exporting_3) | 
+      [Part 4-end](go/language/exporting/exporting_4)
 - **Software Design**
   - Composition
   - Error Handling
