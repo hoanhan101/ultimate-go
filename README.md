@@ -36,7 +36,8 @@ or several links next to it.
   - **Decoupling**
     - Method: [method_1.go](method_1.go) | [method_2.go](method_2.go) | [method_3.go](method_3.go)
     - Interface: [interface_1.go](interface_1.go) | [interface_2.go](interface_2.go)
-    - Embedding
+    - Embedding: [embedding_1.go](embedding_1.go) | [embedding_2.go](embedding_2.go) |
+      [embedding_3.go](embedding_3.go) | [embedding_4.go](embedding_4.go)
     - Exporting
 - **Software Design**
   - Composition
