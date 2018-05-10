@@ -38,14 +38,14 @@ func main() {
 	bill.changeEmail("bill@hotmail.com")
 
 	// Pointers of type user can also be used to call methods declared with both value and pointer receiver.
-	joan := &user{"Hoanh", "hoanhan@email.com"}
-	joan.notify()
-	joan.changeEmail("hoanhan@bennington.edu")
+	hoanh := &user{"Hoanh", "hoanhan@email.com"}
+	hoanh.notify()
+	hoanh.changeEmail("hoanhan@bennington.edu")
 
-	// joan in this example is a pointer that has the type *user. We are still able to call notify.
+	// hoanh in this example is a pointer that has the type *user. We are still able to call notify.
 	// This is still correct. As long as we deal with the type user, Go can adjust to make the call.
 
-	// Behind the scene, we have something like (*joan).notify(). Go will take the value that joan
+	// Behind the scene, we have something like (*hoanh).notify(). Go will take the value that hoanh
 	// points to and make sure that notify leverages its value semantic and works on its own copy.
 
 	// Similarly, bill has the type user but still be able to call changeEmail. Go will take the
@@ -63,7 +63,7 @@ func main() {
 		u.notify()
 	}
 
-	// Iterate over the slice of users switching semantics. Not Good!
+	// Iterate over the slice of users switching semantics. Not good practice.
 	for _, u := range users {
 		u.changeEmail("it@wontmatter.com")
 	}

@@ -39,7 +39,10 @@ type reader interface {
 // interface using a value receiver.
 // There is no fancy syntax. The complier can recognize the implementation here.
 
-// Relationship:
+// ------------
+// Relationship
+// ------------
+
 // We store concrete type values inside interfaces.
 type file struct {
 	name string
@@ -68,7 +71,6 @@ func (pipe) read(b []byte) (int, error) {
 }
 
 func main() {
-
 	// Create two values one of type file and one of type pipe.
 	f := file{"data.json"}
 	p := pipe{"cfg_service"}
@@ -129,9 +131,13 @@ func main() {
 	//  -------
 }
 
+// --------------------
+// Polymorphic function
+// --------------------
+
 // retrieve can read any device and process the data.
 // This is called a polymorphic function.
-// The parameter is being used here is the reader type. But it is valueless? What does it mean?
+// The parameter is being used here is the reader type. But it is valueless. What does it mean?
 // This function will accept any data that implement the reader contract.
 // This function now nothing about the concrete and it is completely decoupled.
 // It is the highest level of decoupling we can get. The algorithm is still efficient and compact.

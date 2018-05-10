@@ -121,6 +121,7 @@ func (t Time) Add(d Duration) Time {
 // func (t *Time) UnmarshalText(data []byte) error {}
 
 // Observation:
+// ------------
 // Most struct types are not going to be able to leverage value semantic. Most struct types are
 // probably gonna be data that should be shared or more efficient to be shared. For example, an
 // User type. Regardless it is possible to copy an User type but it is not a proper thing to do in

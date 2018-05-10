@@ -81,8 +81,8 @@ func main() {
 	//  -----
 	f1()
 
-	// When we change the value of d to "Joan", f1 is not going to see the change.
-	d.name = "Joan"
+	// When we change the value of d to "Hoanh An", f1 is not going to see the change.
+	d.name = "Hoanh An"
 
 	// Call the method via the variable. We don't see the change.
 	f1()
@@ -101,12 +101,11 @@ func main() {
 	//  -----
 	// |  *  | --> code
 	//  -----
-	// |  *  | --> d
+	// |  *  | --> original d
 	//  -----
-	f2(21)
 
 	// Change the value of d.
-	d.name = "Sammy"
+	d.name = "Hoanh An Dinh"
 
 	// Call the method via the variable. We see the change.
 	f2(21)

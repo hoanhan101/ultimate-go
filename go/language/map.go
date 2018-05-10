@@ -9,9 +9,9 @@ type user struct {
 }
 
 func main() {
-	// -------------------------------
-	// Declare, initialize and iterate
-	// -------------------------------
+	// ----------------------
+	// Declare and initialize
+	// ----------------------
 
 	// Declare and make a map that stores values of type user with a key of type string.
 	users1 := make(map[string]user)
@@ -22,16 +22,19 @@ func main() {
 	users1["Mouse"] = user{"Mickey", "Mouse"}
 	users1["Jackson"] = user{"Michael", "Jackson"}
 
-	// Iterate over the map.
+	// --------------------
+	// Iterate over the map
+	// --------------------
+
 	for key, value := range users1 {
 		fmt.Println(key, value)
 	}
 
 	fmt.Println()
 
-	// -----------------------
-	// Map literals and delete
-	// -----------------------
+	// ------------
+	// Map literals
+	// ------------
 
 	// Declare and initialize the map with values.
 	users2 := map[string]user{
@@ -46,8 +49,15 @@ func main() {
 		fmt.Println(key, value)
 	}
 
-	// Delete the Roy key.
+	// ----------
+	// Delete key
+	// ----------
+
 	delete(users2, "Roy")
+
+	// --------
+	// Find key
+	// --------
 
 	// Find the Roy key.
 	// If found is True, we will get a copy value of that type.

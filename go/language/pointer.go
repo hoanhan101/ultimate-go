@@ -118,7 +118,7 @@ func stayOnStack() user {
 // memory on the way up because we don't know if we need that again.
 
 // Back to the example, it is bad because it looks like we take the address of user value, pass it
-// bacl up to the call stack and we now have a pointer which is about to get erased. Therefore, it
+// back up to the call stack and we now have a pointer which is about to get erased. Therefore, it
 // is not what will happen.
 
 // What actually going to happen is the idea of escape analysis.
@@ -140,7 +140,10 @@ func escapeToHeap() *user {
 	return &u
 }
 
+// ----------------------------------
 // What if we run out of stack space?
+// ----------------------------------
+
 // What happen next is during that function call, there is a little preamble that asks "Do we have
 // enough stack space? for this frame?". If yes then no problem because at complied time we know
 // the size of every frame. If no, we have to have bigger frame and these values need to be copy
@@ -153,6 +156,10 @@ func escapeToHeap() *user {
 // be insane.
 // -> The stack for a Goroutine is only for that Goroutine only. It cannot be shared between
 // Goroutine.
+
+// ------------------
+// Garbage collection
+// ------------------
 
 // Once something is moved to the heap, Garbage Collection has to get in.
 // The most important thing about the Garbage Collector (GC) is the pacinng algorithm.

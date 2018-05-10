@@ -1,6 +1,7 @@
 // ---------
 // CPU CACHE
 // ---------
+
 // Cores DO NOT access main memory directly but their local caches.
 // What store in caches are data and instruction.
 
@@ -40,6 +41,10 @@
 // -> This leads us to another cache: TLB - Translation lookaside buffer. Its job is to maintain
 // operating system page and offset to where physical memory is.
 
+// ----------------------------
+// Translation lookaside buffer
+// ----------------------------
+
 // Back to the different granularity, the caching system moves data in and out the hardware at 64
 // bytes at a time. However, the operating system manages memory by paging its 4K (traditional page
 // size for an operating system).
@@ -63,6 +68,10 @@ package main
 import "fmt"
 
 func main() {
+	// -----------------------
+	// Declare and initialize
+	// -----------------------
+
 	// Declare an array of five strings that is initialized to its zero value.
 	// Recap: a string is a 2 word data structure: a pointer and a length
 	// Since this array is set to its zero value, every string in this array is also set to its
@@ -78,7 +87,10 @@ func main() {
 	// At index 0, a string now has a pointer to a backing array of bytes (characters in string)
 	// and its length is 5.
 
+	// -----------------
 	// What is the cost?
+	// -----------------
+
 	// The cost of this assignment is the cost of copying 2 bytes.
 	// We have two string values that have pointers to the same backing array of bytes.
 	// Therefore, the cost of this assignment is just 2 words.
@@ -103,7 +115,10 @@ func main() {
 	strings[3] = "Grape"
 	strings[4] = "Plum"
 
-	// Iterate over the array of strings.
+	// ---------------------------------
+	// Iterate over the array of strings
+	// ---------------------------------
+
 	// Using range, not only we can get the index but also a copy of the value in the array.
 	// fruit is now a string value; its scope is within the for statement.
 	// In the first iteration, we have the word "Apple". It is a string that has the first word
@@ -136,7 +151,10 @@ func main() {
 		fmt.Println(i, numbers[i])
 	}
 
+	// ---------------------
 	// Different type arrays
+	// ---------------------
+
 	// Declare an array of 5 integers that is initialized to its zero value.
 	var five [5]int
 
@@ -154,7 +172,10 @@ func main() {
 
 	// Unsurprisingly, all array has known size at compiled time.
 
+	// -----------------------------
 	// Contiguous memory allocations
+	// -----------------------------
+
 	// Declare an array of 5 strings initialized with values.
 	six := [6]string{"Annie", "Betty", "Charley", "Doug", "Edward", "Hoanh"}
 

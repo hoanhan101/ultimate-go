@@ -23,6 +23,10 @@ func (u *user) notify() {
 // This is an inner type-outer-type relationship where user is an inner type and admin is the
 // outer-type.
 
+// --------------------
+// Inner type promotion
+// --------------------
+
 // What special about embedding in Go is that we have inner type promotion mechanism.
 // In other word, anything relates to the inner type can be promoted up to the outer type.
 // It will mean more in the construction below.

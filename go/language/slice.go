@@ -1,4 +1,4 @@
-// Idea of reference type: slice, map, channel, interface, function.
+// Reference types: slice, map, channel, interface, function.
 // Zero value of a reference type is nil.
 
 package main
@@ -9,9 +9,9 @@ import (
 )
 
 func main() {
-	// ------------------
-	// Declare and length
-	// ------------------
+	// ----------------------
+	// Declare and initialize
+	// ----------------------
 
 	// Create a slice with a length of 5 elements.
 	// make is a special built-in function that only works with slice, map and channel.
@@ -26,7 +26,10 @@ func main() {
 	// |  5  |
 	//  -----
 
-	// Difference between length and capacity
+	// ------------------
+	// Length vs Capacity
+	// ------------------
+
 	// Length is the number of elements from this pointer position we have access to (read and write).
 	// Capacity is the total number of elements from this pointer position that exist in the
 	// backing array.

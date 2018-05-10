@@ -7,7 +7,7 @@ type notifier interface {
 	notify()
 }
 
-// printer displays information
+// printer displays information.
 type printer interface {
 	print()
 }
@@ -18,7 +18,7 @@ type user struct {
 	email string
 }
 
-// print displays user's name and email
+// print displays user's name and email.
 func (u user) print() {
 	fmt.Printf("My name is %s and my email is %s\n", u.name, u.email)
 }
@@ -47,7 +47,7 @@ func main() {
 	// Call polymorphic function but passing u using value semantic: sendNotification(u).
 	// However, the compiler doesn't allow it:
 	// "cannot use u (type user) as type notifier in argument to sendNotification:
-	//  user does not implement notifier (notify method has pointer receiver)"
+	// user does not implement notifier (notify method has pointer receiver)"
 	// This is setting up for an integrity issue.
 
 	// ----------
@@ -63,7 +63,7 @@ func main() {
 	// For any value of a given type *T (pointer of a given type), both value receiver and pointer
 	// receiver methods belong to the method sets.
 	// In other word, if we are working with a pointer of some types, all the methods that has been
-	// declared are associated with that pointer. But if we are working wit a value of some types,
+	// declared are associated with that pointer. But if we are working with a value of some types,
 	// only those methods that operated on value semantic can be applied.
 
 	// In the previous lesson about method, we are calling them before without any problem. That is
@@ -103,14 +103,15 @@ func main() {
 	// implements the interface using a pointer receiver and now we are trying to work with copy of
 	// that value, instead of trying to share it. It is not consistent.
 
-	// The lesson is:
+	// The lesson:
+	// -----------
 	// If we implement interface using pointer receiver, we must use pointer semantic.
 	// If we implement interface using value receiver, we then have the ability to use value
 	// semantic and pointer semantic. However, for consistency, we want to use value semantic most
 	// of the time, unless we are doing something like Unmarshal function.
 
 	// To fix the issue, instead of passing value u, we must pass the address of u (&u).
-	// We create a user value and pass the address of that, which means the interaface now has a
+	// We create a user value and pass the address of that, which means the interface now has a
 	// pointer of type user and we get to point to the original value.
 	//  -------
 	// | *User |
@@ -129,7 +130,7 @@ func main() {
 	// ------------------
 
 	// Create a slice of interface value.
-	// It means that I can store in this dataset any value or pointer that impleement the printer
+	// It means that I can store in this dataset any value or pointer that implement the printer
 	// interface.
 
 	//   index 0   index 1
