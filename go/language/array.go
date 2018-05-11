@@ -139,6 +139,7 @@ func main() {
 	// way of creating garbage.
 	// -> the only thing that has to be on the heap, if anything is the backing array, which is the
 	// one thing that being shared
+	fmt.Printf("\n=> Iterate over array\n")
 	for i, fruit := range strings {
 		fmt.Println(i, fruit)
 	}
@@ -147,6 +148,7 @@ func main() {
 	numbers := [4]int{10, 20, 30, 40}
 
 	// Iterate over the array of numbers using traditional style.
+	fmt.Printf("\n=> Iterate over array using traditional style\n")
 	for i := 0; i < len(numbers); i++ {
 		fmt.Println(i, numbers[i])
 	}
@@ -161,6 +163,7 @@ func main() {
 	// Declare an array of 4 integers that is initialized with some values.
 	four := [4]int{10, 20, 30, 40}
 
+	fmt.Printf("\n=> Different type arrays\n")
 	fmt.Println(five)
 	fmt.Println(four)
 
@@ -185,6 +188,7 @@ func main() {
 	// architecture, it will have x byte. The distance between two consecutive IndexAddr is exactly
 	// x byte.
 	// v is its own variable on the stack and it has the same address every single time.
+	fmt.Printf("\n=> Contiguous memory allocations\n")
 	for i, v := range six {
 		fmt.Printf("Value[%s]\tAddress[%p] IndexAddr[%p]\n", v, &v, &six[i])
 	}

@@ -22,15 +22,14 @@ func main() {
 	users1["Mouse"] = user{"Mickey", "Mouse"}
 	users1["Jackson"] = user{"Michael", "Jackson"}
 
-	// --------------------
-	// Iterate over the map
-	// --------------------
+	// ----------------
+	// Iterate over map
+	// ----------------
 
+	fmt.Printf("\n=> Iterate over map\n")
 	for key, value := range users1 {
 		fmt.Println(key, value)
 	}
-
-	fmt.Println()
 
 	// ------------
 	// Map literals
@@ -45,6 +44,7 @@ func main() {
 	}
 
 	// Iterate over the map.
+	fmt.Printf("\n=> Map literals\n")
 	for key, value := range users2 {
 		fmt.Println(key, value)
 	}
@@ -62,10 +62,13 @@ func main() {
 	// Find the Roy key.
 	// If found is True, we will get a copy value of that type.
 	// if found is False, u is still a value of type user but is set to its zero value.
-	u, found := users2["Roy"]
+	u1, found1 := users2["Roy"]
+	u2, found2 := users2["Ford"]
 
 	// Display the value and found flag.
-	fmt.Println("Roy", found, u)
+	fmt.Printf("\n=> Find key\n")
+	fmt.Println("Roy", found1, u1)
+	fmt.Println("Ford", found2, u2)
 
 	// --------------------
 	// Map key restrictions

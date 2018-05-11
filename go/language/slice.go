@@ -52,6 +52,7 @@ func main() {
 
 	// We are passing the value of slice, not its address. So the Println function will have its
 	// own copy of the slice.
+	fmt.Printf("\n=> Printing a slice\n")
 	fmt.Println(slice1)
 
 	// --------------
@@ -78,11 +79,13 @@ func main() {
 	slice2[3] = "Grape"
 	slice2[4] = "Plum"
 
+	fmt.Printf("\n=> Length vs Capacity\n")
 	inspectSlice(slice2)
 
 	// --------------------------------------------------------
 	// Idea of appending: making slice a dynamic data structure
 	// --------------------------------------------------------
+	fmt.Printf("\n=> Idea of appending\n")
 
 	// Declare a nil slice of strings, set to its zero value.
 	// 3 word data structure: first one points to nil, second and last are zero.
@@ -143,11 +146,15 @@ func main() {
 	// --------------
 
 	// Take a slice of slice2. We want just indexes 2 and 3.
+	// The length is slice3 is 2 and capacity is 6.
 	// Parameters are [starting_index : (starting_index + length)]
 	// By looking at the output, we can see that they are sharing the same backing array.
 	// Thes slice headers get to stay on the stack when we use these value semantics. Only the
 	// backing array that needed to be on the heap.
 	slice3 := slice2[2:4]
+
+	fmt.Printf("\n=> Slice of slice (before)\n")
+	inspectSlice(slice2)
 	inspectSlice(slice3)
 
 	// When we change the value of the index 0 of slice3, who are going to see this change?
@@ -156,19 +163,20 @@ func main() {
 	// The answer is both.
 	// We have to always to aware that we are modifying an existing slice. We have to be aware who
 	// are using it, who is sharing that backing array.
+	fmt.Printf("\n=> Slice of slice (after)\n")
 	inspectSlice(slice2)
 	inspectSlice(slice3)
 
+	// How about slice3 := append(slice3, "CHANGED")?
 	// Similar problem will occur with append iff the length and capacity is not the same.
 	// Instead of changing slice3 at index 0, we call append on slice3. Since the length of slice3
 	// is 2, capacity is 6 at the moment, we have extra rooms for modification. We go and change
 	// the element at index 3 of slice3, which is index 4 of slice2. That is very dangerous.
 
-	// So, what if the length and capacity is the same?
+	// So, what if the length and capacity is the same? Instead of making slice3 capacity 6, we set
+	// it to 2 by adding  another parameter to the slicing syntax like this: slice3 := slice2[2:4:4]
 	// When append look at this slice and see that the length and capacity is the same, it wouldn't
 	// bring in the element at index 4 of slice2. It would detach.
-	// When we add another parameter to the slicing syntax that set the capacity to be the same
-	// like this: slice3 := slice2[2:4:4]
 	// slice3 will have a length of 2 and capacity of 2, still share the same backing array.
 	// On the call to append, length and capacity will be different. The addresses are also different.
 	// This is called 3 index slice. This new slice will get its own backing array and we don't
@@ -183,6 +191,8 @@ func main() {
 	// the builtin copy function.
 	slice4 := make([]string, len(slice2))
 	copy(slice4, slice2)
+
+	fmt.Printf("\n=> Copy a slice\n")
 	inspectSlice(slice4)
 
 	// -------------------
@@ -211,11 +221,13 @@ func main() {
 	x[1]++
 
 	// By printing out the output, we can see that we are in trouble.
+	fmt.Printf("\n=> Slice and reference\n")
 	fmt.Println("twohundred:", *twohundred, "x[1]:", x[1])
 
 	// -----
 	// UTF-8
 	// -----
+	fmt.Printf("\n=> UTF-8\n")
 
 	// Everything in Go is based on UTF-8 character sets.
 	// If we use different encoding scheme, we might have a problem.
