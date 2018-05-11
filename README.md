@@ -45,7 +45,7 @@ or several links next to it.
       [Part 4-end](go/language/exporting/exporting_4)
 - **Software Design**
   - Composition
-    - Grouping types: [Part 1](grouping_types_1.go) | [Part 2-end](grouping_types_2.go)
+    - Grouping types: [Part 1](go/design/grouping_types_1.go) | [Part 2-end](go/design/grouping_types_2.go)
     - Decoupling
     - Conversion
     - Assertion
