@@ -7,7 +7,9 @@ files. That way, I can understand every single line of code as I am reading and 
 the theories behind the scene.
 
 **Resources:**
-- [Ardan Labs's Ultimate Go course
+- [Ultimate Go
+  Programming](https://www.safaribooksonline.com/library/view/ultimate-go-programming/9780134757476/)
+- [ardanlabs/gotraining/topics/courses/go
   ](https://github.com/ardanlabs/gotraining/blob/master/topics/courses/go/README.md)
 - [Computer Systems: A Programmer's
   Perspective](https://www.amazon.com/Computer-Systems-Programmers-Perspective-3rd/dp/013409266X)
