@@ -48,7 +48,8 @@ or several links next to it.
 - **Software Design**
   - Composition
     - Grouping types: [Part 1](go/design/grouping_types_1.go) | [Part 2-end](go/design/grouping_types_2.go)
-    - Decoupling
+    - Decoupling: [Part 1](go/design/decoupling_1.go) | [Part 2](go/design/decoupling_2.go) |
+    [Part 3](go/design/decoupling_3.go) | [Part 4](go/design/decoupling_4.go)
     - Conversion
     - Assertion
     - Interface Pollution
