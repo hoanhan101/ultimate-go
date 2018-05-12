@@ -23,6 +23,8 @@
 // Instead of passing Xenial and Pillar, we pass in the Puller and Storer. The algorithm doesn't
 // change. All we doing is now calling pull/store indirectly through the interface value.
 
+// Next step:
+// ----------
 // Copy also doesn't have to change because Xenia/Pillar already implemented the interfaces.
 // However, we are not done because Copy is still bounded to the concrete. Copy can only work with
 // pointer of type system. We need to decouple Copy so we can have a decoupled system that knows

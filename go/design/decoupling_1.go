@@ -35,6 +35,10 @@
 // We are optimizing for correctness, not performance. We can always go back if it doesn't perform
 // well enough to speed thing up.
 
+// Next step:
+// ----------
+// Decouple using interface.
+
 package main
 
 import (
