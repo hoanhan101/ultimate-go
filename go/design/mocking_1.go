@@ -31,7 +31,7 @@
 
 // Package pubsub simulates a package that provides publication/subscription type services.
 
-package pubsub
+package main // should be pubsub, but leave main here for it to compile
 
 // PubSub provides access to a queue system.
 type PubSub struct {
