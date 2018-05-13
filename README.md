@@ -46,14 +46,14 @@ or several links next to it.
       [Part 2](go/language/exporting/exporting_2) | [Part 3](go/language/exporting/exporting_3) | 
       [Part 4-end](go/language/exporting/exporting_4)
 - **Software Design**
-  - Composition
+  - Composition:
+    [Guideline](https://github.com/ardanlabs/gotraining/tree/master/topics/go#interface-and-composition-design)
     - Grouping types: [Part 1](go/design/grouping_types_1.go) | [Part 2-end](go/design/grouping_types_2.go)
     - Decoupling: [Part 1](go/design/decoupling_1.go) | [Part 2](go/design/decoupling_2.go) |
-    [Part 3](go/design/decoupling_3.go) | [Part 4](go/design/decoupling_4.go)
-    - Conversion
-    - Assertion
-    - Interface Pollution
-    - Mocking
+    [Part 3](go/design/decoupling_3.go) | [Part 4-end](go/design/decoupling_4.go)
+    - Conversion: [Part 1](go/design/conversion_1.go) | [Part 2-end](go/design/conversion_2.go)
+    - Interface Pollution: [Part 1](go/design/pollution_1.go) | [Part 2-end](go/design/pollution_2.go)
+    - Mocking: [Part 1](go/design/mocking_1.go) | [Part 2-end](go/design/mocking_2.go)
   - Error Handling
   - Packaging
 - **Concurrency**
