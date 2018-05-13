@@ -54,7 +54,7 @@ or several links next to it.
     - Conversion: [Part 1](go/design/conversion_1.go) | [Part 2-end](go/design/conversion_2.go)
     - Interface Pollution: [Part 1](go/design/pollution_1.go) | [Part 2-end](go/design/pollution_2.go)
     - Mocking: [Part 1](go/design/mocking_1.go) | [Part 2-end](go/design/mocking_2.go)
-  - Error Handling
+  - Error Handling: [Part 1](go/design/error_1.go)
   - Packaging
 - **Concurrency**
   - **Mechanics**
