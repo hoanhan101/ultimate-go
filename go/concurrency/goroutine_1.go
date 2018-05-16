@@ -227,6 +227,10 @@
 // Go's scheduler is gonna look and feel preemptive even though we are calling a cooperating
 // scheduler.
 
+// However, let's not think about how the scheduler work. Think the following way makes it easier
+// for future development.
+// Every single G, every Goroutine that is in runnable state, is running at the same time.
+
 package main
 
 import "fmt"
