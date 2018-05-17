@@ -61,7 +61,9 @@ or several links next to it.
     [Guideline](https://github.com/ardanlabs/gotraining/blob/master/topics/go/design/packaging/README.md)
 - **Concurrency**
   - **Mechanics**
-    - Goroutine
+    - Goroutine: [Part 1](go/concurrency/goroutine_1.go) | [Part 2](go/concurrency/goroutine_2.go) |
+      [Part 3](go/concurrency/goroutine_3.go) | [Part 4](go/concurrency/goroutine_4.go) |
+      Part 5-end
     - Data race
     - Channel
   - **Patterns**
