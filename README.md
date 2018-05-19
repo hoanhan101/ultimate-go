@@ -7,6 +7,7 @@ files. That way, I can understand every single line of code as I am reading and 
 the theories behind the scene.
 
 **Resources:**
+
 - [Ultimate Go
   Programming](https://www.safaribooksonline.com/library/view/ultimate-go-programming/9780134757476/)
 - [ardanlabs/gotraining/topics/courses/go
@@ -16,10 +17,16 @@ the theories behind the scene.
 
 ## Project Status
 
-It is an on-going project. 
+It is an on-going project. I am trying to complete 1-2 small parts of a section every day.
 
 Below are the outline of the all topics. Normally, a topic is covered when there is a link, 
 or several links next to it.
+
+**Tasks**
+
+- [ ] Phase 1: Finish Ultimate Go Programming's video lectures
+- [ ] Phase 2: Fill in all the missing details using Ardan Labs's links and examples
+- [ ] Phase 3: Study Computer Systems book to reinforce the theory. Build more programs if needed.
 
 ## Table of Contents 
 
