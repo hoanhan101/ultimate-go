@@ -11,13 +11,13 @@ import (
 	"sync/atomic"
 )
 
-// counter is a variable incremented by all goroutines.
+// counter is a variable incremented by all Goroutines.
 // Notice that it's not just an int but int64. We are being very specific about the precision
 // because the atomic function requires us to do so.
 var counter int64
 
 func main() {
-	// Number of goroutines to use.
+	// Number of Goroutines to use.
 	const grs = 2
 
 	// wg is used to manage concurrency.
@@ -45,7 +45,7 @@ func main() {
 		}()
 	}
 
-	// Wait for the goroutines to finish.
+	// Wait for the Goroutines to finish.
 	wg.Wait()
 
 	// Display the final value.
