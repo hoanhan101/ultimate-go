@@ -32,6 +32,7 @@ package main
 
 import (
 	"fmt"
+	"runtime"
 	"sync"
 )
 
@@ -53,12 +54,19 @@ func main() {
 	// and writing at the same time. However, we are very lucky in this case. What we are seeing it
 	// that, each Goroutine is executing the 3 statements atomically completely by accident every
 	// time this code run.
-	// runtime.Go
+	// If we put the line runtime.Gosched(), it will tell the scheduler to be part of the
+	// cooperation here and yield my time on that m. This will force the data race to happen. Once
+	// we read the value out of that shared state, we are gonna force the context switch. Then we
+	// come back, we are not getting 4 as frequent.
 	for i := 0; i < grs; i++ {
 		go func() {
 			for count := 0; count < 2; count++ {
 				// Capture the value of Counter.
 				value := counter
+
+				// Yield the thread and be placed back in queue.
+				// FOR TESTING ONLY! DO NOT USE IN PRODUCTION CODE!
+				runtime.Gosched()
 
 				// Increment our local value of Counter.
 				value++
