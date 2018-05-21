@@ -20,7 +20,7 @@
 // was. If there is less threads, each thread can get more time to be reschedule. If the is more
 // thread, each thread have less time over a long period of time.
 
-// :Less is more" is a really big concept here when we start to write concurrent software. We want to
+// "Less is more" is a really big concept here when we start to write concurrent software. We want to
 // leverage the preemptive scheduler. So the Go's scheduler, the logical processor actually runs in
 // user mode, the mode our application is running at. Because of that, we have to call the Go's
 // scheduler a cooperating scheduler. What brilliant here is the runtime that coordinating the
@@ -28,7 +28,7 @@
 // is more" concept gets to present itself and we get to do a lot more work with less. Our goal needs
 // to be how much work we get done with the less number of threads.
 
-// Think about this in a simple way because processors are complex: hyperthreading, multiple thread
+// Think about this in a simple way because processors are complex: hyperthreading, multiple threads
 // per core, clock cycle. We can only execute one operating system thread at a time on any given
 // core. If we only have 1 core, only 1 thread can be executed at a time. Anytime we have more
 // threads in runnable states than we have cores, we are creating load, latency and we are getting
@@ -47,6 +47,8 @@
 // thing. Go has its run queue as well. It has Global Run Queue (GRQ) and every P has a Local Run
 // Queue (LRQ).
 
+// Goroutine
+// ---------
 // What is a Goroutine? It is a path of execution. Threads are paths of execution. That path of
 // execution needs to be scheduled. In Go, every function or method can be created to be a
 // Goroutine, can become an independent path of execution that can be scheduled to run on some
@@ -58,7 +60,7 @@
 
 // A Goroutine, just like thread, can be in one of three major states: sleeping, executing or in
 // runnable state asking to wait for some time to execute on the hardware. When the runtime creates
-// out Goeoutine, it is gonna placed in P and multiplex on this thread. Remember that it's the
+// a Goroutine, it is gonna placed in P and multiplex on this thread. Remember that it's the
 // operating system that taking the thread, scheduling it, placing it on some core and doing
 // execution. So Go's scheduler is gonna take all the code related to that Goroutine's path of
 // execution, place it on a thread, tell the operating system that this thread is in runnable state
@@ -71,7 +73,7 @@
 // would end up in the LRQ where they're saying they would like some time to execute.
 
 // This queue does not necessarily follow First-In-First-Out protocol. We have to understand that
-// everything here is nondeterministic, just like the operating system scheduler is. We cannot
+// everything here is non-deterministic, just like the operating system scheduler is. We cannot
 // predict what the scheduler is gonna do when all things are equal. It is gonna make sure there is
 // a balance. Until we get into orchestration, till we learn how to coordinate these execution of
 // these Goroutines, there is no predictability.
@@ -110,7 +112,7 @@
 //      G1        |
 //                G2
 
-// Let's say G1 decides to open up a file. Opening up a file can microsecond or 10 miliseconds. We
+// Let's say G1 decides to open up a file. Opening up a file can microsecond or 10 milliseconds. We
 // don't really know. If we allow this Goroutine to block this operating system thread while we
 // open up that file, we are not getting more work done. In this scenario here, having a single P,
 // we are single threaded software application. All Goroutines only execute on the m attached to
@@ -182,7 +184,7 @@
 // has to happen here. While that's happening, thread is is asleep so it's not running at all. From
 // thread 1, we send a message over and want to wait to get a message back. In order to do that,
 // there is another to context switch need to be happened because we can put a different thread on
-// that core (?). We are waiting for the operating system to schedule thread2 so we are going to
+// that core (?). We are waiting for the operating system to schedule thread 2 so we are going to
 // get another context switch, waking up and running, processing the message and sending the
 // message back. On every single message that we are passing back and forth, thread is gonna from
 // executable state to runnable state to asleep state. This is gonna cost a lot of context switches
@@ -199,14 +201,14 @@
 // G1 wants to send a message to G2 and we perform a context switch. However, the context here
 // is user's space switch. G1 can be taken of the thread and G2 can be put on the thread. From the
 // operating system point of view, this thread never go to sleep. This thread is always executing
-// and never needed to be context switched out. It is the Go's scheduler that keeps the Gorouines
+// and never needed to be context switched out. It is the Go's scheduler that keeps the Goroutines
 // context switched.
 //               m
 //               |
 //             -----
 //            |  P  |
 //             -----
-//  G1                      G2
+//  G1                         G2
 //  | CTX      message     CTX |
 //  | -----------------------> |
 //  | CTX                    | |
