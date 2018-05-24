@@ -78,7 +78,7 @@ or several links next to it.
     - Channel: [Guideline](https://github.com/ardanlabs/gotraining/tree/master/topics/go#concurrent-software-design) |
     [Part 1](go/concurrency/channel_1.go) | [Part 2](go/concurrency/channel_2.go) |
     [Part 3](go/concurrency/channel_3.go) | [Part 4](go/concurrency/channel_4.go) |
-    [Part 5](go/concurrency/channel_5.go) | [Part 6](go/concurrency/channel_6.go)
+    [Part 5](go/concurrency/channel_5.go) | [Part 6-end](go/concurrency/channel_6.go)
   - **Patterns**
     - Context
     - Pattern
