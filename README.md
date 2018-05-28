@@ -80,7 +80,8 @@ or several links next to it.
     [Part 3](go/concurrency/channel_3.go) | [Part 4](go/concurrency/channel_4.go) |
     [Part 5](go/concurrency/channel_5.go) | [Part 6-end](go/concurrency/channel_6.go)
   - **Patterns**
-    - Context
+    - Context: [Part 1](go/concurrency/context_1.go) | [Part 2](go/concurrency/context_2.go) |
+    [Part 3](go/concurrency/context_3.go) | [Part 4](go/concurrency/context_4.go) | [Part 5](go/concurrency/context_5.go)
     - Pattern
 - **Testing and Profiling**
   - Testing
