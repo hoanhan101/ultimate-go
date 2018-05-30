@@ -84,7 +84,7 @@ or several links next to it.
     [Part 3](go/concurrency/context_3.go) | [Part 4](go/concurrency/context_4.go) | [Part 5-end](go/concurrency/context_5.go)
     - Pattern
 - **Testing and Profiling**
-  - Testing
+  - Testing: [Part 1](go/testing/basic_test.go)
   - Benchmarking
   - Fuzzing
   - Profiling
