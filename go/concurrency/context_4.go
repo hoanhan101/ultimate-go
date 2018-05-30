@@ -1,5 +1,5 @@
 // -----------
-// WaitTimeout
+// WithTimeout
 // -----------
 
 package main
