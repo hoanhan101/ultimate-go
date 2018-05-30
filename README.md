@@ -37,7 +37,8 @@ or several links next to it.
   [Guideline](https://github.com/ardanlabs/gotraining/blob/master/topics/go/README.md)
 - **Language Mechanics**
   - **Syntax**
-    - Variable: [Part 1-end](go/language/variable.go)
+    - Variable: [Built-in types | Zero value concept | Declaration and initialization | 
+      Conversion vs Casting](go/language/variable.go)
     - Struct: [Part 1-end](go/language/struct.go)
     - Pointer: [Part 1-end](go/language/pointer.go)
     - Constant: [Part 1-end](go/language/constant.go)
