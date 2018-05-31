@@ -13,14 +13,9 @@ import (
 	"testing"
 )
 
-const (
-	succeed = "\u2713"
-	failed  = "\u2717"
-)
-
-// TestDownload validates the http Get function can download content and
+// TestTable validates the http Get function can download content and
 // handles different status conditions properly.
-func TestDownload(t *testing.T) {
+func TestTable(t *testing.T) {
 	// This table is a slice of anonymous struct type. It is the URL we are gonna call and
 	// statusCode are what we expect.
 	tests := []struct {

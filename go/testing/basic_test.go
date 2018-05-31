@@ -30,7 +30,7 @@ const (
 	failed  = "\u2717"
 )
 
-// TestDownload validates the http.Get function can download content.
+// TestBasic validates the http.Get function can download content.
 // Every test will be associated with test function. It starts with the word Test and the first
 // word after Test must be capitalized. It uses a testing.T pointer as its parameter.
 
@@ -51,7 +51,7 @@ const (
 
 // We are also using the artificial block between a long Log function.
 // They help with readability.
-func TestDownload(t *testing.T) {
+func TestBasic(t *testing.T) {
 	url := "https://www.goinggo.net/post/index.xml"
 	statusCode := 200
 
@@ -80,5 +80,5 @@ func TestDownload(t *testing.T) {
 // -------
 // We can just say "go test" and the testing tool will find that function.
 // We can also say "go test -v" for verbosity, we will get a full output of the logging.
-// Suppose that we have a lot of test functions, "go test -run TestDownload" will only run the
-// TestDownload function.
+// Suppose that we have a lot of test functions, "go test -run TestBasic" will only run the
+// TestBasic function.
