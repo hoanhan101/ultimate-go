@@ -128,12 +128,20 @@ or several links next to it.
       - [WithTimeout](go/concurrency/context_4.go)
       - [Request/Response](go/concurrency/context_5.go)
     - Pattern
+      - Task
+      - Logger
 - **Testing and Profiling**
   - Testing: 
     - [Basic Unit Test](go/testing/basic_test.go)
     - [Table Test](go/testing/table_test.go)
+    - [Sub Test](go/testing/sub_test.go)
+    - [Web Server](go/testing/web_server)
+    - [Mock Server](go/testing/web_test.go)
   - Benchmarking
+    - Basic Benchmark
+    - Sub Benchmark
   - Fuzzing
+    - [Guideline](https://github.com/ardanlabs/gotraining/blob/master/topics/go/testing/fuzzing/README.md)
   - Profiling
 - **Packages**
   - Context
