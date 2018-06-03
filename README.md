@@ -138,8 +138,8 @@ or several links next to it.
     - [Web Server](go/testing/web_server)
     - [Mock Server](go/testing/web_test.go)
   - Benchmarking
-    - Basic Benchmark
-    - Sub Benchmark
+    - [Basic Benchmark](go/benchmark/basic_test.go)
+    - [Sub Benchmark](go/benchmark/sub_test.go)
   - Fuzzing
     - [Guideline](https://github.com/ardanlabs/gotraining/blob/master/topics/go/testing/fuzzing/README.md)
   - Profiling
