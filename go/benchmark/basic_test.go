@@ -13,10 +13,10 @@
 // go test -run none -bench . -benchmem -benchtime 3s
 
 // Sample output:
-// BenchmarkSprint-8       50000000                78.7 ns/op             5 B/op          1 allocs/op
-// BenchmarkSprintf-8      100000000               60.5 ns/op             5 B/op          1 allocs/op
+// BenchmarkSprintBasic-8       50000000                78.7 ns/op             5 B/op          1 allocs/op
+// BenchmarkSprintfBasic-8      100000000               60.5 ns/op             5 B/op          1 allocs/op
 
-package basic
+package main
 
 import (
 	"fmt"
@@ -31,7 +31,7 @@ var gs string
 // run long enough based on our bench time.
 // fmt.Sprint returns a value and we want to capture this value so it doesn't look like dead code.
 // We assign it to the global variable gs.
-func BenchmarkSprint(b *testing.B) {
+func BenchmarkSprintBasic(b *testing.B) {
 	var s string
 
 	for i := 0; i < b.N; i++ {
@@ -42,7 +42,7 @@ func BenchmarkSprint(b *testing.B) {
 }
 
 // BenchmarkSprint tests the performance of using Sprintf.
-func BenchmarkSprintf(b *testing.B) {
+func BenchmarkSprintfBasic(b *testing.B) {
 	var s string
 
 	for i := 0; i < b.N; i++ {
