@@ -144,6 +144,7 @@ or several links next to it.
   - Fuzzing
     - [Guideline](https://github.com/ardanlabs/gotraining/blob/master/topics/go/testing/fuzzing/README.md)
   - Profiling
+    - Stack Trace: [Review](go/profiling/stack_trace_1.go) | [Packing](go/profiling/stack_trace_2.go)
 - **Packages**
   - Context
   - Encoding
