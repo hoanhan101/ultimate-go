@@ -137,6 +137,7 @@ or several links next to it.
     - [Sub Test](go/testing/sub_test.go)
     - [Web Server](go/testing/web_server)
     - [Mock Server](go/testing/web_test.go)
+    - [Test Coverage](go/testing/README.md)
   - Benchmarking
     - [Basic Benchmark](go/benchmark/basic_test.go)
     - [Sub Benchmark](go/benchmark/sub_test.go)
