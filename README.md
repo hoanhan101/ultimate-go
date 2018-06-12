@@ -9,7 +9,7 @@ take notes carefully and comment directly on the source code, rather than writin
 files. That way, I can understand every single line of code as I am reading and also be mindful of
 the theories behind the scene.
 
-**Resources:**
+**References:**
 
 - [Ultimate Go
   Programming](https://www.safaribooksonline.com/library/view/ultimate-go-programming/9780134757476/)
