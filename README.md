@@ -9,6 +9,8 @@ take notes carefully and comment directly on the source code, rather than writin
 files. That way, I can understand every single line of code as I am reading and also be mindful of
 the theories behind the scene.
 
+In the mix, I also include links to other articles that I find helpful.
+
 **References:**
 
 - [Ultimate Go
@@ -40,8 +42,11 @@ or several links next to it.
     - Variable: [Built-in types | Zero value concept | Initialization | Conversion vs Casting
       ](go/language/variable.go)
     - Struct: [Initialization | Name type vs Anonymous type](go/language/struct.go)
-    - Pointer: [Passing by value | Escape analysis | Stack space | Garbage Collection
-      ](go/language/pointer.go)
+    - Pointer: 
+      - [Passing by value | Escape analysis | Stack space | Garbage Collection
+        ](go/language/pointer.go)
+      - [Golang's Code Review Receiver
+        Type](https://github.com/golang/go/wiki/CodeReviewComments#receiver-type)
     - Constant: [Initialization | iota](go/language/constant.go)
     - Function: [Initialization](go/language/function.go)
   - **Data Structures**
