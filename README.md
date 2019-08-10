@@ -29,8 +29,8 @@ or several links next to it.
 
 **Tasks**
 
-- [ ] Phase 1: Finish Ultimate Go Programming's video lectures
-- [ ] Phase 2: Fill in all the missing details using Ardan Labs's links and examples
+- [x] Phase 1: Finish Ultimate Go Programming's video lectures
+- [x] Phase 2: Fill in all the missing details using Ardan Labs's links and examples
 - [ ] Phase 3: Study Computer Systems book to reinforce the theory. Build more programs if needed.
 
 ## Table of Contents 
