@@ -53,7 +53,7 @@ or several links next to it.
     - Array: [CPU Cache | TLB | Initialization | Iteration | Type array | Contiguous memory
       allocation](go/language/array.go)
     - Slice: [Initialization | Length vs Capacity | Reference Type | Appending | Slice of Slice |
-      Copy of Sice | UTF-8](go/language/slice.go)
+      Copy of Slice | UTF-8](go/language/slice.go)
     - Map: [Initialization | Iteration | Deleting | Finding | Restriction ](go/language/map.go)
   - **Decoupling**
     - Method: 
