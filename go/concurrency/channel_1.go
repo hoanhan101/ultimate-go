@@ -24,7 +24,7 @@
 // cannot move because channel has to know if there is another Goroutine is on the other side to
 // receive it. Eventually a Goroutine come and say that it want to receive the data. Both of
 // Goroutines are not putting their hands in the channel. The data now can be transferred.
-// Here is the key to why that unbuffered channel gives us that guarantee: the receive ahppens
+// Here is the key to why that unbuffered channel gives us that guarantee: the receive happens
 // first. When the receive happens, we know that the data transfer has occurred and we can walk
 // away.
 
