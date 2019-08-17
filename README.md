@@ -162,3 +162,7 @@ or several links next to it.
   - IO
   - Logging
   - Reflection
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/hoanhan101/ultimate-go.svg)](https://starchart.cc/hoanhan101/ultimate-go)
