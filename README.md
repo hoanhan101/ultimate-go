@@ -4,9 +4,9 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/hoanhan101/ultimate-go)
 ](https://goreportcard.com/report/github.com/hoanhan101/ultimate-go)
 [![hackernews](https://img.shields.io/badge/hackernews-435%2B-orange)](https://news.ycombinator.com/item?id=20701671)
-[![r/golang](https://img.shields.io/badge/reddit-245%2B-orange)](https://www.reddit.com/r/golang/comments/cqqi9h/ultimate_go_study_guides_with_heavily_documented/)
-[![r/compsci](https://img.shields.io/badge/reddit-55%2B-orange)](https://www.reddit.com/r/compsci/comments/cr3jzh/ultimate_go_study_guides_with_heavily_documented/)
-[![r/programming](https://img.shields.io/badge/reddit-35%2B-orange)](https://www.reddit.com/r/programming/comments/cr3gqu/ultimate_go_study_guides_with_heavily_documented/)
+[![r/golang](https://img.shields.io/badge/r/golang-245%2B-orange)](https://www.reddit.com/r/golang/comments/cqqi9h/ultimate_go_study_guides_with_heavily_documented/)
+[![r/compsci](https://img.shields.io/badge/r/compsci-55%2B-orange)](https://www.reddit.com/r/compsci/comments/cr3jzh/ultimate_go_study_guides_with_heavily_documented/)
+[![r/programming](https://img.shields.io/badge/r/programming-35%2B-orange)](https://www.reddit.com/r/programming/comments/cr3gqu/ultimate_go_study_guides_with_heavily_documented/)
 
 This repo contains my notes on learning Go and computer systems. Different people have different
 learning style. For me, I learn best by doing and walking through examples. Hence, I am trying to
