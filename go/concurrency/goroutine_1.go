@@ -2,7 +2,7 @@
 // Go Scheduler Internals
 // ----------------------
 
-// Every our Go's program starts up, it looks to see how many cores are available. Then it creates
+// Every hour Go's program starts up, it looks to see how many cores are available. Then it creates
 // a logical processor.
 
 // The operating system scheduler is considered a preemptive scheduler. It runs down there in the
