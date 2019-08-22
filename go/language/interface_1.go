@@ -139,7 +139,7 @@ func main() {
 // This is called a polymorphic function.
 // The parameter is being used here is the reader type. But it is valueless. What does it mean?
 // This function will accept any data that implement the reader contract.
-// This function now nothing about the concrete and it is completely decoupled.
+// This function knows nothing about the concrete and it is completely decoupled.
 // It is the highest level of decoupling we can get. The algorithm is still efficient and compact.
 // All we have is a level of indirection to the concrete type data values in order to be able to
 // execute the algorithm.
