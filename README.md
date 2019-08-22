@@ -8,9 +8,9 @@
 [![r/compsci](https://img.shields.io/badge/r/compsci-55%2B-orange)](https://www.reddit.com/r/compsci/comments/cr3jzh/ultimate_go_study_guides_with_heavily_documented/)
 [![r/programming](https://img.shields.io/badge/r/programming-35%2B-orange)](https://www.reddit.com/r/programming/comments/cr3gqu/ultimate_go_study_guides_with_heavily_documented/)
 
-> [If you're looking for more study guides like this](https://www.getrevue.co/profile/hoanhan101)
+> [If you're looking for more study guides like this, subscribe to my newsletter here](https://www.getrevue.co/profile/hoanhan101)
 
-> [Here is the link to my Ultimate Go study guides for mastering coding interview challenges](https://medium.com/@hoanhan101/i-am-making-ultimate-study-guides-for-mastering-coding-interview-challenges-3f88a228441a)
+> [This is the link to my Ultimate Go study guides for mastering coding interview challenges](https://medium.com/@hoanhan101/i-am-making-ultimate-study-guides-for-mastering-coding-interview-challenges-3f88a228441a)
 
 <p align="center">
   <img src="gopher.png" alt="gopher" width="300"/>
