@@ -32,7 +32,7 @@ func (u *user) notify() {
 	fmt.Printf("Sending User Email To %s<%s>\n", u.name, u.email)
 }
 
-// String implements the fmt.Springer interface.
+// String implements the fmt.Stringer interface.
 // The fmt package that we've been using to display things on the screen, if it receive a piece of
 // data that implement this behavior, it will use this behavior and overwrite its default.
 // Since we are using pointer semantic, only pointer satisfies the interface.
