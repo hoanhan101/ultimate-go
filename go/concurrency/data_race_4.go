@@ -52,11 +52,11 @@ func main() {
 
 	// Create eight reader Goroutines that runs forever.
 	for i := 0; i < 8; i++ {
-		go func() {
+		go func(i int) {
 			for {
 				reader(i)
 			}
-		}()
+		}(i)
 	}
 
 	// Wait for the write Goroutine to finish.
