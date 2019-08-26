@@ -31,6 +31,7 @@ In the mix, I also include links to other articles that I find helpful.
   ](https://github.com/ardanlabs/gotraining/blob/master/topics/courses/go/README.md)
 - [Computer Systems: A Programmer's
   Perspective](https://www.amazon.com/Computer-Systems-Programmers-Perspective-3rd/dp/013409266X)
+- [Free Gophers Pack](https://github.com/MariaLetta/free-gophers-pack)
 
 ## Project Status
 
