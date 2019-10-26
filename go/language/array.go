@@ -179,7 +179,7 @@ func main() {
 	// Contiguous memory allocations
 	// -----------------------------
 
-	// Declare an array of 5 strings initialized with values.
+	// Declare an array of 6 strings initialized with values.
 	six := [6]string{"Annie", "Betty", "Charley", "Doug", "Edward", "Hoanh"}
 
 	// Iterate over the array displaying the value and address of each element.

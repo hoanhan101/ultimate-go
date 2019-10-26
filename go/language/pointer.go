@@ -50,7 +50,7 @@ func main() {
 	// Pass the "value of" count.
 	increment1(count)
 
-	// Printing out the result of count. Nothing is change.
+	// Printing out the result of count. Nothing has changed.
 	println("count:\tValue Of[", count, "]\tAddr Of[", &count, "]")
 
 	// Pass the "address of" count.
@@ -107,7 +107,7 @@ func stayOnStack() user {
 // semantic.
 
 // You might think about what we have after this call is: main has a pointer to a value that is
-// on a stack frame below. It is the case then we are in trouble.
+// on a stack frame below. If this is the case, then we are in trouble.
 // Once we come back up the call stack, this memory is there but it is reusable again. It is no
 // longer valid. Anytime now main makes a function call, we need to allocate the frame and
 // initialize it.
