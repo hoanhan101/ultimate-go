@@ -128,7 +128,7 @@ func stayOnStack() user {
 // In the stayOnStack function, because we are passing the copy of the value itself, it is safe to
 // keep these things on the stack. But when we SHARE something above the call stack like this,
 // escape analysis said this memory is no longer be valid when we get back to main, we must put it
-// out there on the heap. main is end up having a pointer to the heap.
+// out there on the heap. main will end up having a pointer to the heap.
 // In fact, this allocation happens immediately on the heap. escapeToHeap is gonna have a pointer
 // to the heap. But u is gonna base on value semantic.
 func escapeToHeap() *user {
@@ -162,7 +162,7 @@ func escapeToHeap() *user {
 // ------------------
 
 // Once something is moved to the heap, Garbage Collection has to get in.
-// The most important thing about the Garbage Collector (GC) is the pacinng algorithm.
+// The most important thing about the Garbage Collector (GC) is the pacing algorithm.
 // It determines the frequency/pace that the GC has to run in order to maintain the smallest t as
 // possible.
 
