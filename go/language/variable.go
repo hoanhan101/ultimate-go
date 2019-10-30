@@ -16,7 +16,7 @@ func main() {
 	// - uint8 contains a base 10  number using one byte of memory
 	// - int32 contains a base 10 number using 4 bytes of memory.
 
-	// When we declare a type without being very specific, such as uint or int, it get mapped
+	// When we declare a type without being very specific, such as uint or int, it gets mapped
 	// based on the architecture we are building the code against.
 	// On a 64-bit OS, int will map to int64. Similarly, on a 32 bit OS, it becomes int32.
 
@@ -38,9 +38,9 @@ func main() {
 	// - Pointer nil
 
 	// Strings are a series of uint8 types.
-	// A string is a 2 word data structure: first word represent a pointer to a backing array, the
-	// second word represent it length.
-	// If it is a zero value then the first word is nil, the second word is 0
+	// A string is a two word data structure: first word represents a pointer to a backing array, the
+	// second word represents its length.
+	// If it is a zero value then the first word is nil, the second word is 0.
 
 	// ----------------------
 	// Declare and initialize
