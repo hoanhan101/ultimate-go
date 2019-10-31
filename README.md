@@ -39,7 +39,7 @@ In the mix, I also include links to other articles that I find helpful.
 
 It is a work in progress.
 
-Below are the outline of the all topics. Normally, a topic is covered when there is a link, 
+Below is the outline of all the topics. Normally, a topic is covered when there is a link, 
 or several links next to it.
 
 **Tasks**
