@@ -9,7 +9,7 @@
 // Refactoring has to become a part of the development cycle.
 
 // Here is the problem that we are trying to solve in this section.
-// We have a system called Xenia that that has a database.
+// We have a system called Xenia that has a database.
 // There is another system called Pillar, which is a web server with some front-end that consume
 // it. It has a database too.
 // Our goal is to move the Xenia's data into Pillar's system.
