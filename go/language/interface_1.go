@@ -81,7 +81,7 @@ func main() {
 	// The compiler will ask: Does this file value implement the reader interface?
 	// The answer is Yes because there is a method there using the value receiver that implements
 	// its contract.
-	// The second word of the interface value will store its won copy of f. The first word points
+	// The second word of the interface value will store its own copy of f. The first word points
 	// to a special data structure that we call the iTable.
 	// The iTable serves 2 purposes:
 	// - The first part describes the type of value being stored. In our case, it is the file value.
