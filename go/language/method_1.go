@@ -9,7 +9,7 @@ type user struct {
 }
 
 // notify implements a method with a value receiver: u of type user
-// In Go, a function is called a method if that function has declare within it a receiver.
+// In Go, a function is called a method if that function has receiver declared within itself.
 // It looks and feels like a parameter but it is exactly what it is.
 // Using the value receiver, the method operates on its own copy of the value that is used to make
 // the call.
@@ -18,7 +18,7 @@ func (u user) notify() {
 }
 
 // changeEmail implements a method with a pointer receiver: u of type pointer user
-// Using the pointer reciever, the method operates on share access.
+// Using the pointer reciever, the method operates on shared access.
 func (u *user) changeEmail(email string) {
 	u.email = email
 }
@@ -63,7 +63,7 @@ func main() {
 		u.notify()
 	}
 
-	// Iterate over the slice of users switching semantics. Not good practice.
+	// Iterate over the slice of users switching semantics. This is not a good practice.
 	for _, u := range users {
 		u.changeEmail("it@wontmatter.com")
 	}

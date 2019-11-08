@@ -33,8 +33,8 @@ func (u *user) notify() {
 }
 
 // String implements the fmt.Stringer interface.
-// The fmt package that we've been using to display things on the screen, if it receive a piece of
-// data that implement this behavior, it will use this behavior and overwrite its default.
+// The fmt package that we've been using to display things on the screen, if it receives a piece of
+// data that implements this behavior, it will use this behavior and overwrite its default.
 // Since we are using pointer semantic, only pointer satisfies the interface.
 func (u *user) String() string {
 	return fmt.Sprintf("My name is %q and my email is %q", u.name, u.email)
@@ -57,12 +57,13 @@ func main() {
 	// In the specification, there are sets of rules around the concepts of method sets. What we
 	// are doing is against these rules.
 
-	// What are the rules are?
-	// For any value of a given type T, only those methods implemented with a value receiver
+	// What are the rules?
+	// * For any value of a given type T, only those methods implemented with a value receiver
 	// belong to the method sets of that type.
-	// For any value of a given type *T (pointer of a given type), both value receiver and pointer
-	// receiver methods belong to the method sets.
-	// In other word, if we are working with a pointer of some types, all the methods that has been
+	// * For any value of a given type *T (pointer of a given type), both value receiver and pointer
+	// receiver methods belong to the method sets of that type.
+
+	// In other words, if we are working with a pointer of some types, all the methods that has been
 	// declared are associated with that pointer. But if we are working with a value of some types,
 	// only those methods that operated on value semantic can be applied.
 
@@ -79,7 +80,7 @@ func main() {
 	// It is not 100% guarantee that any value that can satisfy the interface has an address.
 	// We can never call a pointer receiver because if that value doesn't have an address, it is
 	// not shareable. For example:
-	//      Declare a type name duration that is based on an integer
+	//      Declare a type named duration that is based on an integer
 	//      type duration int
 
 	//      Declare a method name notify using a pointer receiver.
@@ -99,8 +100,8 @@ func main() {
 	//      Why can't we get the address? Because 42 is not stored in a variable. It is still literal
 	//      value that we don't know ahead the type. Yet it still does implement the notifier interface.
 
-	// Come back to our example, when we get the error, we know that we are mixing semantics. u
-	// implements the interface using a pointer receiver and now we are trying to work with copy of
+	// Come back to our example, when we get the error, we know that we are mixing semantics.
+	// u implements the interface using a pointer receiver and now we are trying to work with copy of
 	// that value, instead of trying to share it. It is not consistent.
 
 	// The lesson:
@@ -129,7 +130,7 @@ func main() {
 	// Slice of interface
 	// ------------------
 
-	// Create a slice of interface value.
+	// Create a slice of interface values.
 	// It means that I can store in this dataset any value or pointer that implement the printer
 	// interface.
 
@@ -166,7 +167,7 @@ func main() {
 // This is our polymorphic function.
 // sendNotification accepts values that implement the notifier interface and sends notifications.
 // This is again saying: I will accept any value or pointer that implement the notifier interface.
-// I will call that behavior against the interface itself .
+// I will call that behavior against the interface itself.
 func sendNotification(n notifier) {
 	n.notify()
 }

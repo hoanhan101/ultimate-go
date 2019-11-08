@@ -5,7 +5,7 @@
 // When it comes to use built-in type (numeric, string, bool), we should always be using value
 // semantics. When a piece of code that take an address of an integer or a bool, this raises a
 // big flag. It's hard to say because it depends on the context. But in general, why should
-// these values end up on the heap creating garbage? These should be stay on the stack. There
+// these values end up on the heap creating garbage? These should be on the stack. There
 // is an exception to everything. However, until we know it is okay to take the exception, we
 // should follow the guideline.
 
@@ -72,8 +72,8 @@ func ipEmptyString(ip IP) string {
 // Pointer semantic
 // ----------------
 
-// Should time use value or pointer semantics?
-// If you need to modify a time value should you mutate the value or create a new one?
+// Should Time use value or pointer semantics?
+// If you need to modify a Time value, should you mutate the value or create a new one?
 type Time struct {
 	sec  int64
 	nsec int32
@@ -82,8 +82,8 @@ type Time struct {
 
 // The best way to understand what semantic is going to be used is to look at the factory function
 // for type. It dictates the semantics that will be used. In this example, the Now function
-// returns a value of type Time. It is making a copy of it Time value and passing it back up.
-// This means Time value can be stayed on the stack. We should be using semantic all the way
+// returns a value of type Time. It is making a copy of its Time value and passing it back up.
+// This means Time value can be on the stack. We should be using value semantic all the way
 // through.
 func Now() Time {
 	sec, nsec := now()
@@ -95,7 +95,7 @@ func Now() Time {
 // However, it has not been wrong because it is the type that has to drive the semantic, not the
 // implementation of the method. The method must adhere to the semantic that we choose.
 // Add is using a value receiver and returning a value of type Time. It is mutating its local copy
-// and returning our something new.
+// and returning to us something new.
 func (t Time) Add(d Duration) Time {
 	t.sec += int64(d / 1e9)
 	nsec := int32(t.nsec) + int32(d%1e9)
@@ -114,7 +114,7 @@ func (t Time) Add(d Duration) Time {
 // The function is using value semantics for type Time.
 // func div(t Time, d Duration) (qmod2 int, r Duration) {}
 
-// The only use pointer semantics for the `Time` API are these Unmarshal related functions:
+// The only use of pointer semantics for the `Time` API are these Unmarshal-related functions:
 // func (t *Time) UnmarshalBinary(data []byte) error {}
 // func (t *Time) GobDecode(data []byte) error {}
 // func (t *Time) UnmarshalJSON(data []byte) error {}
@@ -124,7 +124,7 @@ func (t Time) Add(d Duration) Time {
 // ------------
 // Most struct types are not going to be able to leverage value semantic. Most struct types are
 // probably gonna be data that should be shared or more efficient to be shared. For example, an
-// User type. Regardless it is possible to copy an User type but it is not a proper thing to do in
+// User type. Regardless, it is possible to copy an User type but it is not a proper thing to do in
 // real world.
 
 // Other examples:
