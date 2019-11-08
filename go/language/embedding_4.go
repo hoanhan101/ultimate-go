@@ -1,5 +1,5 @@
 // ---------------------------------------------
-// OUTER AND INNER TYPE IMPLEMENT SAME INTERFACE
+// OUTER AND INNER TYPE IMPLEMENTING THE SAME INTERFACE
 // ---------------------------------------------
 
 package main

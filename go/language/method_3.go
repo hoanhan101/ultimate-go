@@ -1,5 +1,5 @@
 // Methods are really just made up. They are not real. They are just syntactic sugar.
-// They give us a believe system that some pieces of data exposed some capabilities.
+// They give us a believe system that some pieces of data expose some capabilities.
 // Object-oriented programming has driven design and capabilities. However, there is no OOP in Go.
 // There is data and behavior. At some time, data can expose some capabilities, but for specific
 // purposes, not to really design API around. Methods are really just functions.

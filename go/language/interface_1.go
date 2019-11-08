@@ -34,10 +34,10 @@ type reader interface {
 // A concrete type is any type that can have a method. Only user defined type can have a method.
 // Method allows a piece of data to expose capabilities, primarily around interfaces.
 // file defines a system file.
-// It is a concrete type because the have the method read below. It is identical to the method in
+// It is a concrete type because it has the method read below. It is identical to the method in
 // the reader interface. Because of this, we can say the concrete type file implements the reader
 // interface using a value receiver.
-// There is no fancy syntax. The complier can recognize the implementation here.
+// There is no fancy syntax. The complier can automatically recognize the implementation here.
 
 // ------------
 // Relationship
@@ -104,14 +104,14 @@ func main() {
 	// implementation of read for this type of value.
 	retrieve(f)
 
-	// Similar with p. Now the first word of reader interface point to pipe, not file and the
-	// second word points to a copy of pip value.
+	// Similar with p. Now the first word of reader interface points to pipe, not file and the
+	// second word points to a copy of pipe value.
 
 	//       reader           iTable
 	//    -----------        -------
 	//   |           |      |  pipe  |
 	//   |     *     | -->   -------
-	//   |           |      |    *   | --> code
+	//   |           |      |   *    | --> code
 	//    -----------        --------
 	//   |           |       --------
 	//   |     *     | -->  | p copy | --> read()

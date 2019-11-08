@@ -20,7 +20,7 @@ func (u *user) notify() {
 
 // admin represents an admin user with privileges.
 // person user is not embedding. All we do here just create a person field based on that other
-// concrete type name user.
+// concrete type named user.
 type admin struct {
 	person user // NOT Embedding
 	level  string
