@@ -18,7 +18,7 @@ func main() {
 		Title: "Dev Manager",
 	}
 
-	// However, once we have the manager value the exported fields from that unexported type are
+	// However, once we have the manager value, the exported fields from that unexported type are
 	// accessible.
 	u.Name = "Hoanh"
 	u.ID = 101
