@@ -29,7 +29,7 @@ func main() {
 
 	// Launch two players.
 	// Both are gonna start out in a receive mode. We are not really sure who is gonna get the ball
-	// first. Image the main Goroutine is the judge. It depends on the judge to choose.
+	// first. Imagine the main Goroutine is the judge. It depends on the judge to choose.
 	go func() {
 		player("Hoanh", court)
 		wg.Done()
