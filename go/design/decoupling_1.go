@@ -3,7 +3,7 @@
 // ------------------
 
 // Prototyping is important, as well as writing proof of concept and solving problem in the
-// concrete way first. Then we can ask ourselves: What can change? What change is coming? so we can
+// concrete first. Then we can ask ourselves: What can change? What change is coming? so we can
 // start decoupling and refactor.
 
 // Refactoring need to become a part of the development cycle.
