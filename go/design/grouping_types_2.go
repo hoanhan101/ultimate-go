@@ -7,8 +7,8 @@
 // This pattern does provide a good design principle in a Go program.
 
 // We will group common types by their behavior and not by their state.
-// What brilliant about Go is that it doesn't have to be configured ahead of time. The compiler
-// identifies interface and behaviours at compiled time. In means that we can write code today that
+// What brilliant about Go is that it doesn't have to be configured ahead of time. The compiler automatically
+// identifies interface and behaviors at compile time. It means that we can write code today that
 // compliant with any interface that exists today or tomorrow. It doesn't matter where that is
 // declared because the compiler can do this on the fly.
 
@@ -62,14 +62,14 @@ func (c Cat) Speak() {
 func main() {
 	// Create a list of Animals that know how to speak.
 	speakers := []Speaker{
-		// Create a Dog by initializing its Animal parts and then its specific Dog attributes.
+		// Create a Dog by initializing Dog attributes.
 		Dog{
 			Name:       "Fido",
 			IsMammal:   true,
 			PackFactor: 5,
 		},
 
-		// Create a Cat by initializing its Animal parts and then its specific Cat attributes.
+		// Create a Cat by initializing Cat attributes.
 		Cat{
 			Name:        "Milo",
 			IsMammal:    true,
@@ -77,7 +77,7 @@ func main() {
 		},
 	}
 
-	// Have the Animals speak.
+	// Have the Speakers speak.
 	for _, spkr := range speakers {
 		spkr.Speak()
 	}
@@ -89,7 +89,7 @@ func main() {
 
 // - Declare types that represent something new or unique. We don't want to create aliases just for readability.
 // - Validate that a value of any type is created or used on its own.
-// - Embed types not because we need the state but because we need the behavior. If we not thinking
-// about behavior, we are really locking ourselves into the design that we cannot grow in the future.
-// - Question types that are an alias or abstraction for an existing type.
+// - Embed types not because we need the state but because we need the behavior. If we are not thinking
+// about behavior, we are locking ourselves into the design that we cannot grow in the future.
+// - Question types that are aliases or abstraction for an existing type.
 // - Question types whose sole purpose is to share common state.
