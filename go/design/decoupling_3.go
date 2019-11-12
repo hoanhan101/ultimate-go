@@ -4,13 +4,12 @@
 
 // Let's just add another interface. Let's use interface composition to do this.
 // PullStorer has both behaviors: Puller and Storer. Any concrete type that implement both pull and
-// store is a PullStorer. System is a PullStorer because it is embedded of these 2 types Xenia and
+// store is a PullStorer. System is a PullStorer because it is embedded of these 2 types, Xenia and
 // Pillar. Now we just need to go into Copy, replace the system pointer with PullStorer and no
-// other code need to change. When we call Copy passing the address of our System value in main,
-// that already implement the PullStorer interface.
+// other code need to change.
 
 // Looking closely at Copy, there is something that could potentially confuse us. We are passing
-// the PullStorer interface value into pull and store respectively.
+// the PullStorer interface value directly into pull and store respectively.
 // If we look into pull and store, they don't want a PullStorer. One want a Puller and one want a
 // Storer. Why does the compiler allow us to pass a value of different type value while it didn't
 // allow us to do that before?
@@ -21,15 +20,15 @@
 // behaviors for another interface. It is true that any concrete type that is stored inside of a
 // PullStorer must also implement the Storer and Puller.
 
-// Let's walkthrough the code.
-// In the main function, we are creating a value of our type System. As we know, our type System
+// Let's further look into the code.
+// In the main function, we are creating a value of our System type. As we know, our System type 
 // value is based on the embedding of two concrete types: Xenia and Pillar, where Xenia knows how
-// to pull and Pillar knows how to store. Because of inner promotion, System knows also how to pull
-// and store.
+// to pull and Pillar knows how to store. 
+// Because of inner type promotion, System knows how to pull and store both inherently.
 // We are passing the address of our System to Copy. Copy then creates the PullStorer interface.
 // The first word is a System pointer and the second word point to the original value. This
 // interface now knows how to pull and store. When we call pull off of ps, we call pull off of
-// System, which call pull off of Xenia.
+// System, which eventually call pull off of Xenia.
 // Here is the kicker: the implicit interface conversion.
 // We can pass the interface value ps to pull because the compiler knows that any concrete type
 // stored inside the PullStorer must also implement Puller. We end up with another interface called
@@ -62,7 +61,7 @@
 // ----------
 // Our system type is still concrete system type because it is still based on two concrete types,
 // Xenial and Pillar. If we have another system, say Alice, we have to change in type System
-// struct. This it not good. We will solve the last piece in the next file.
+// struct. This is not good. We will solve the last piece in the next file.
 
 package main
 
@@ -93,7 +92,7 @@ type Storer interface {
 	Store(d *Data) error
 }
 
-// PullStorer declares behavior for both pulling and storing.
+// PullStorer declares behaviors for both pulling and storing.
 type PullStorer interface {
 	Puller
 	Storer

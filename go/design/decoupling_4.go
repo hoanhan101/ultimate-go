@@ -7,7 +7,7 @@
 // behaviors is now based on the embedding of 2 interface types. It means that we can inject any
 // data, not based on the common DNA but on the data that providing the capability, the behavior
 // that we need.
-// Now we can be fully decouple because any value that implements the Puller interface can be store
+// Now our code can be fully decouplable because any value that implements the Puller interface can be stored
 // inside the System (same with Storer interface). We can create multiple Systems and that data can
 // be passed in Copy.
 // We don't need method here. We just need one function that accept data and its behavior will
@@ -78,7 +78,7 @@ type Storer interface {
 	Store(d *Data) error
 }
 
-// PullStorer declares behavior for both pulling and storing.
+// PullStorer declares behaviors for both pulling and storing.
 type PullStorer interface {
 	Puller
 	Storer

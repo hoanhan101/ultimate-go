@@ -2,7 +2,7 @@
 // Decoupling With Interface
 // -------------------------
 
-// By looking at the API (function), we need to decouple the API from the concrete. The decoupling
+// By looking at the API (functions), we need to decouple the API from the concrete implementation. The decoupling
 // that we do must get all the way down into initialization. To do this right, the only piece of
 // code that we need to change is initialization. Everything else should be able to act on the
 // behavior that these types are gonna provide.
@@ -14,7 +14,7 @@
 
 // It is nice to work from the concrete up. When we do this, not only we are solving problem
 // efficiently and reducing technical debt but the contracts, they come to us. We already know what
-// the contract is for pulling/storing data. We already validate that this is what we need.
+// the contract is for pulling/storing data. We already validate that and this is what we need.
 
 // Let's just decouple these 2 functions and add 2 interfaces. The Puller interface knows how to
 // pull and the Storer knows how to store.
