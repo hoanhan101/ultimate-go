@@ -2,14 +2,14 @@
 // Package To Mock
 // ---------------
 
-// It is important to mock thing.
+// It is important to mock things.
 // Most things over the network can be mocked in our test. However, mocking our database is a
 // different story because it is too complex. This is where Docker can come in and simplify our
 // code by allowing us to launch our database while running our tests and have that clean database
 // for everything we do.
 
 // Every API only need to focus on its test. We no longer have to worry about the application user
-// or user over API test. We used to worry about: if we don't have that interface, then the user
+// or user over API test. We used to worry about: if we don't have that interface, the user
 // who use our API can't write test. That is gone. The example below will demonstrate the reason.
 
 // Imagine we are working at a company that decides to incorporate Go as a part of its stack. They
@@ -17,7 +17,7 @@
 // doing event sourcing and there is a single pubsub platform they are using that is not going to
 // be replaced. They need the pubsub API for Go that they can start building services that connect
 // into this event source.
-// So what can change? Can the even source change?
+// So what can change? Can the event source change?
 // If the answer is no, then it immediately tells us that we don't need to use interfaces. We can
 // built the entire API in the concrete, which we would do it first anyway. We then write tests to
 // make sure everything work.
@@ -31,7 +31,11 @@
 
 // Package pubsub simulates a package that provides publication/subscription type services.
 
-package main // should be pubsub, but leave main here for it to compile
+package main
+
+import (
+	"fmt"
+)
 
 // PubSub provides access to a queue system.
 type PubSub struct {
@@ -50,14 +54,16 @@ func New(host string) *PubSub {
 	return &ps
 }
 
-// Publish sends the data for the specified key.
+// Publish sends the data to the specified key.
 func (ps *PubSub) Publish(key string, v interface{}) error {
 	// PRETEND THERE IS A SPECIFIC IMPLEMENTATION.
+	fmt.Println("Actual PubSub: Publish")
 	return nil
 }
 
-// Subscribe sets up an request to receive messages for the specified key.
+// Subscribe sets up an request to receive messages from the specified key.
 func (ps *PubSub) Subscribe(key string) error {
 	// PRETEND THERE IS A SPECIFIC IMPLEMENTATION.
+	fmt.Println("Actual PubSub: Subscribe")
 	return nil
 }
