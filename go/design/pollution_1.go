@@ -7,13 +7,13 @@
 
 // Why are we using an interface here?
 // Myth #1: We are using interfaces because we have to use interfaces.
-// No. We don't have to use interfaces. We use it when it is practical and reasonable to do so.
+// Answer: No. We don't have to use interfaces. We use it when it is practical and reasonable to do so.
 // Even though they are wonderful, there is a cost of using interfaces: a level of indirection and
-// potential allocation, when we store concrete type inside of them. Unless the cost of that is
-// worth whatever decoupling we are getting, then we shouldn't be taking the cost.
+// potential allocation when we store concrete type inside of them. Unless the cost of that is
+// worth whatever decoupling we are getting, we shouldn't be using interfaces.
 
 // Myth #2: We need to be able to test our code so we need to use interfaces.
-// No. We must design our API that are usable for user application developer first, not our test.
+// Answer: No. We must design our API that are usable for user application developer first, not our test.
 
 // Below is an example that creates interface pollution by improperly using an interface
 // when one is not needed.
@@ -41,7 +41,7 @@ type server struct {
 // interface value.
 // It is not that functions and interfaces cannot return interface values. They can. But normally,
 // that should raise a flag. The concrete type is the data that has the behavior and the interface
-// normally should be used as accepting the input to the data, not necessary going out.
+// normally should be used as accepting the input to the data, not necessarily going out.
 func NewServer(host string) Server {
 	// SMELL - Storing an unexported type pointer in the interface.
 	return &server{host}
