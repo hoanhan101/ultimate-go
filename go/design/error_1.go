@@ -12,7 +12,7 @@ package main
 import "fmt"
 
 // http://golang.org/pkg/builtin/#error
-// This is built in the language so it looks like an unexported type. It has one active behavior,
+// This is pre-included in the language so it looks like an unexported type. It has one active behavior,
 // which is Error returned a string.
 // Error handling is decoupled because we are always working with error interface when we are
 // testing our code.
@@ -62,7 +62,7 @@ func main() {
 	// We are calling webCall and return the error interface and store that in a variable.
 	// nil is a special value in Go. What "error != nil" actually means is that we are asking if
 	// there is a concrete type value that is stored in error type interface. Because if error is
-	// not nil, there is a concrete value stored inside. If that's is the case, we've got an error.
+	// not nil, there is a concrete value stored inside. If it is the case, we've got an error.
 	// Now do we handle the error, do we return the error up the call stack for someone else to
 	// handle? We will talk about this latter.
 	if err := webCall(); err != nil {
