@@ -6,12 +6,12 @@
 // The main goal of logging is to debug.
 
 // We only log things that are actionable. Only log the contexts that are allowed us to identify
-// that is going on. Anything else ideally is noise and would be better suited up on the dashboard
+// what is going on. Anything else ideally is noise and would be better suited up on the dashboard
 // through metrics. For example, socket connection and disconnection, we can log these but these
-// are not actionable because we don't necessary lookup the log for that.
+// are not actionable because we don't necessarily lookup the log for that.
 
 // There is a package that is written by Dave Cheney called errors that let us simplify error
-// handling and logging that the same time. Below is a demonstration on how to leverage the package
+// handling and logging at the same time. Below is a demonstration on how to leverage the package
 // to simplify our code. By reducing logging, we also reduce a large amount of pressure on the heap
 // (garbage collection).
 
@@ -29,7 +29,7 @@ type AppError struct {
 	State int
 }
 
-// Error implements the error interface.
+// AppError implements the error interface.
 func (c *AppError) Error() string {
 	return fmt.Sprintf("App Error, State: %d", c.State)
 }
@@ -49,9 +49,9 @@ func main() {
 	// around it and push it up. This maintains the call stack of where we are in the code.
 	// Similarly, firstCall doesn't handle the error but wraps and pushes it up.
 
-	// In main, we are handling the call, which means the bug stops here and I have to log it.
+	// In main, we are handling the call, which means the error stops here and we have to log it.
 	// In order to properly handle this error, we need to know that the root cause of this error
-	// was. It is the original error that is not wrapped. Cause will bubble up this error out of
+	// was. It is the original error that is not wrapped. Cause method will bubble up this error out of
 	// these wrapping and allow us to be able to use all the language mechanics we have.
 
 	// We are not only be able to access the State even though we've done this assertion back to
@@ -77,7 +77,7 @@ func main() {
 	}
 }
 
-// firstCall makes a call to a second function and wraps any error.
+// firstCall makes a call to a secondCall function and wraps any error.
 func firstCall(i int) error {
 	if err := secondCall(i); err != nil {
 		return errors.Wrapf(err, "firstCall->secondCall(%d)", i)
@@ -85,7 +85,7 @@ func firstCall(i int) error {
 	return nil
 }
 
-// secondCall makes a call to a third function and wraps any error.
+// secondCall makes a call to a thirdCall function and wraps any error.
 func secondCall(i int) error {
 	if err := thirdCall(); err != nil {
 		return errors.Wrap(err, "secondCall->thirdCall()")
@@ -93,7 +93,7 @@ func secondCall(i int) error {
 	return nil
 }
 
-// thirdCall create an error value we will validate.
+// thirdCall function creates an error value we will validate.
 func thirdCall() error {
 	return &AppError{99}
 }
