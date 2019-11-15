@@ -5,7 +5,7 @@
 // It is not always possible to be able to say the interface value itself will be enough context.
 // Sometimes, it requires more context. For example, a networking problem can be really
 // complicated. Error variables wouldn't work there.
-// Only when the error variables wouldn't work are we allowed to go ahead and start working with
+// Only when the error variables wouldn't work, we should go ahead and start working with
 // custom concrete type for the error.
 
 // Below are two custom error types from the json package in the standard library and see how we
@@ -27,11 +27,11 @@ type UnmarshalTypeError struct {
 	Type  reflect.Type // type of Go value it could not be assigned to
 }
 
-// Error implements the error interface.
+// UnmarshalTypeError implements the error interface.
 // We are using pointer semantic.
 // In the implementation, we are validating all the fields are being used in the error message. If
 // not, we have a problem. Because why would you add a field to the custom error type and not
-// displaying your log if this method would call. We only do this when we really need it.
+// displaying on your log when this method would call. We only do this when we really need it.
 func (e *UnmarshalTypeError) Error() string {
 	return "json: cannot unmarshal " + e.Value + " into Go value of type " + e.Type.String()
 }
@@ -43,7 +43,7 @@ type InvalidUnmarshalError struct {
 	Type reflect.Type
 }
 
-// Error implements the error interface.
+// InvalidUnmarshalError implements the error interface.
 func (e *InvalidUnmarshalError) Error() string {
 	if e.Type == nil {
 		return "json: Unmarshal(nil)"
@@ -97,8 +97,8 @@ func Unmarshal(data []byte, v interface{}) error {
 
 // There is one flaw when using type as context here. In this case, we are now going back to the
 // concrete. We walk away from the decoupling because our code is now bounded to these concrete
-// types. If the developer who wrote the json package makes any changes to these conretey types,
-// that's gonna create a cascading effect all the way through our code. We are no longer proteced
+// types. If the developer who wrote the json package makes any changes to these concrete types,
+// that's gonna create a cascading effect all the way through our code. We are no longer protected
 // by the decoupling of the error interface.
 
 // This sometime has to happen. Can we do something differnt not to lose the decoupling. This is

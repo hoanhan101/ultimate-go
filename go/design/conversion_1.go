@@ -57,7 +57,7 @@ func main() {
 	//  ------                      ------
 	// | bike |        bike        | bike |
 	//  ------        ------        ------
-	// |  *   | ---> |      | <--- |      |
+	// |  *   | ---> |      | <--- |  *   |
 	//  ------        ------        ------
 
 	// However, we cannot go in the other direction, like so:
@@ -82,11 +82,19 @@ func main() {
 	// value of type bike that was stored inside of it. Then assign the COPY of the concrete type
 	// to the MoveLocker interface.
 
+
 	// This is the syntax for type assertion.
 	// We are taking the interface value itself, dot (bike). We are using bike as an parameter.
-	// If there is a bike inside of m, we will get a copy of it since we are using value semantic.
+	// If m is not nil and there is a bike inside of m, we will get a copy of it since we are using value semantic.
+	// Or else, a panic occurs.
 	// b is having a copy of bike value.
 	b := m.(bike)
+	
+	// We can prevent panic when type assertion breaks by destructuring
+	// the boolean value that represents type assertion result
+	b, ok := m.(bike)
+	fmt.Println("Does m has value of bike?:", ok)
+
 	ml = b
 
 	// It's important to note that the type assertion syntax provides a way to state what type

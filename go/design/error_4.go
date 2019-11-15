@@ -29,7 +29,7 @@ func (c *client) TypeAsContext() {
 		line, err := c.reader.ReadString('\n')
 		if err != nil {
 			// This is using type as context like the previous example.
-			// What special here is the method Temporary. If it is, we can keep going but if not,
+			// What special here is the method named Temporary. If it is, we can keep going but if not,
 			// we have to break thing down and build thing back up.
 			// Every one of these cases care only about 1 thing: the behavior of Temporary. This is
 			// what important. We can switch here, from type as context to type as behavior if we
@@ -70,7 +70,7 @@ func (c *client) TypeAsContext() {
 }
 
 // temporary is declared to test for the existence of the method coming from the net package.
-// Because Temporary this the only behavior we care about. If the concrete type has the method
+// Because Temporary is the only behavior we care about. If the concrete type has the method
 // named temporary then this is what we want. We get to stay decoupled and continue to work at the
 // interface level.
 type temporary interface {
@@ -86,7 +86,7 @@ func (c *client) BehaviorAsContext() {
 			switch e := err.(type) {
 			// We can reduce 3 cases into 1 by asking in the case here during type assertion: Does
 			// the concrete type stored inside the error interface also implement this interface.
-			// We can declare that interface for myself and we leverage it ourselves.
+			// We can declare and leverage that interface ourselves.
 			case temporary:
 				if !e.Temporary() {
 					log.Println("Temporary: Client leaving chat")
@@ -108,8 +108,6 @@ func (c *client) BehaviorAsContext() {
 }
 
 // Lesson:
-// If we can one of these methods to our concrete error type, we can maintain a level of decoupling:
-// - Temporary
-// - Timeout
-// - NotFound
-// - NotAuthorized
+// Thank to Go Implicit Conversion.
+// We can maintain a level of decopling by creating an interface with methods or behaviors that we only want,
+// and use it instead of concrete type for type assertion switch. 
