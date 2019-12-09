@@ -2,19 +2,20 @@
 // Client
 // ------
 
+// Run: `go run ./go/design/mocking_1.go ./go/design/mocking_2.go`
+
 // Sample program to show how we can personally mock concrete types when we need to for
 // our own packages or tests.
 package main
 
 import (
-	"github.com/hoanhan101/ultimate-go/go/design/pubsub"
+	"fmt"
 )
 
-// publisher is an interface to allow this package to mock the pubsub package support.
+// publisher is an interface to allow this package to mock the pubsub package.
 // When we are writing our applications, declare our own interface that map out all the APIs call
 // we need for the APIs. The concrete types APIs in the previous files satisfy it out of the box.
-// We can write the entire application/mocking decoupling from themselves from conrete
-// implementations.
+// We can write the entire application with mocking decoupling from conrete implementations.
 type publisher interface {
 	Publish(key string, v interface{}) error
 	Subscribe(key string) error
@@ -26,12 +27,14 @@ type mock struct{}
 // Publish implements the publisher interface for the mock.
 func (m *mock) Publish(key string, v interface{}) error {
 	// ADD YOUR MOCK FOR THE PUBLISH CALL.
+	fmt.Println("Mock PubSub: Publish")
 	return nil
 }
 
 // Subscribe implements the publisher interface for the mock.
 func (m *mock) Subscribe(key string) error {
 	// ADD YOUR MOCK FOR THE SUBSCRIBE CALL.
+	fmt.Println("Mock PubSub: Subscribe")
 	return nil
 }
 
@@ -39,7 +42,7 @@ func main() {
 	// Create a slice of publisher interface values. Assign the address of a pubsub.
 	// PubSub value and the address of a mock value.
 	pubs := []publisher{
-		pubsub.New("localhost"),
+		New("localhost"),
 		&mock{},
 	}
 
