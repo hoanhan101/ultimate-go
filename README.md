@@ -1,5 +1,4 @@
-# Ultimate Go
-
+# Ultimate Go study guide
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/hoanhan101/ultimate-go)
 ](https://goreportcard.com/report/github.com/hoanhan101/ultimate-go)
@@ -15,7 +14,6 @@
 <p align="center">
   <img src="gopher.png" alt="gopher" width="300"/>
 </p>
-
 
 This repo contains my notes on learning Go and computer systems. Different people have different
 learning style. For me, I learn best by doing and walking through examples. Hence, I am trying to
