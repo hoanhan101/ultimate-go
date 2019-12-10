@@ -29,7 +29,7 @@ func main() {
 	var err error
 
 	// When we call fail, it returns the value of nil. However, we have the nil value of type
-	// *customError. We always want to use the error intarface as the return value. The customError
+	// *customError. We always want to use the error interface as the return value. The customError
 	// type is just an artifact, a value that we store inside. We cannot use the custom type
 	// directly. We must use the error interface, like so func fail() ([]byte, error)
 	if _, err = fail(); err != nil {
