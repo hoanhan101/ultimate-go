@@ -15,6 +15,8 @@
   <img src="gopher.png" alt="gopher" width="300"/>
 </p>
 
+## Motivation
+
 This repo contains my notes on learning Go and computer systems. Different people have different
 learning style. For me, I learn best by doing and walking through examples. Hence, I am trying to
 take notes carefully and comment directly on the source code, rather than writing up Markdown
@@ -23,28 +25,12 @@ the theories behind the scene.
 
 In the mix, I also include links to other articles that I find helpful.
 
-**References:**
-
-- [Ultimate Go
-  Programming](https://www.safaribooksonline.com/library/view/ultimate-go-programming/9780134757476/)
-- [ardanlabs/gotraining/topics/courses/go
-  ](https://github.com/ardanlabs/gotraining/blob/master/topics/courses/go/README.md)
-- [Computer Systems: A Programmer's
-  Perspective](https://www.amazon.com/Computer-Systems-Programmers-Perspective-3rd/dp/013409266X)
-- [Free Gophers Pack](https://github.com/MariaLetta/free-gophers-pack)
-
 ## Project Status
 
 It is a work in progress.
 
 Below is the outline of all the topics. Normally, a topic is covered when there is a link, 
 or several links next to it.
-
-**Tasks**
-
-- [x] Phase 1: Finish Ultimate Go Programming's video lectures
-- [x] Phase 2: Fill in all the missing details using Ardan Labs's links and examples
-- [ ] Phase 3: Study Computer Systems book to reinforce the theory. Build more programs if needed.
 
 ## Table of Contents 
 
@@ -170,6 +156,16 @@ or several links next to it.
   - IO
   - Logging
   - Reflection
+
+## References
+
+- [Ultimate Go
+  Programming](https://www.safaribooksonline.com/library/view/ultimate-go-programming/9780134757476/)
+- [ardanlabs/gotraining/topics/courses/go
+  ](https://github.com/ardanlabs/gotraining/blob/master/topics/courses/go/README.md)
+- [Computer Systems: A Programmer's
+  Perspective](https://www.amazon.com/Computer-Systems-Programmers-Perspective-3rd/dp/013409266X)
+- [Free Gophers Pack](https://github.com/MariaLetta/free-gophers-pack)
 
 ## Stargazers over time
 
