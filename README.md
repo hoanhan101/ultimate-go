@@ -25,13 +25,6 @@ the theories behind the scene.
 
 In the mix, I also include links to other articles that I find helpful.
 
-## Project Status
-
-It is a work in progress.
-
-Below is the outline of all the topics. Normally, a topic is covered when there is a link, 
-or several links next to it.
-
 ## Table of Contents 
 
 - **Design Philosophy**:
