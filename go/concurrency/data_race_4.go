@@ -3,9 +3,9 @@
 // ----------------
 
 // There are times when we have a shared resource where we want many Goroutines reading it.
-// Occasionally, one Goroutine can come in and make change to the resource. When that happen, every
-// body has to stop reading. It doesn't make sense to synchronize read in this type of scenario
-// because we are just adding another latency to our software for no reason.
+// Occasionally, one Goroutine can come in and make change to the resource. When that happens, everybody 
+// has to stop reading. It doesn't make sense to synchronize reads in this type of scenario
+// because we are just adding latency to our software for no reason.
 
 package main
 
@@ -107,7 +107,7 @@ func reader(id int) {
 // have to coordinate orchestrating. However, if we can reduce latency using Read/Write Mutex, life
 // is better.
 
-// If we are using mutex, make sure that we need to get in and out of mutex as fast as possible. Do
-// not anything extra. Sometime just reading the shared state into a local variable is all we need
-// to do, The less operation we can perform on the mutex, the better. We then reduce the latency to
+// If we are using mutex, make sure that we get in and out of mutex as fast as possible. Do
+// not anything extra. Sometimes just reading the shared state into a local variable is all we need
+// to do. The less operation we can perform on the mutex, the better. We then reduce the latency to
 // the bare minimum.

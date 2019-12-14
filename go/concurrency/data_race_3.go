@@ -20,8 +20,8 @@ var (
 	// mutex is used to define a critical section of code.
 	// Picture mutex as a room where all Goroutines have to go through. However, only one Goroutine
 	// can go at a time. The scheduler will decide who can get in and which one is next. We cannot
-	// determine what the scheduler is gonna do. It's gonna be hopefully be fair. Just because one
-	// Goroutine got to the door before another doesn't that Goroutine got to ended first. Nothing
+	// determine what the scheduler is gonna do. Hopefully, it is gonna be fair. Just because one
+	// Goroutine got to the door before another, it doesn't mean that Goroutine will get to the end first. Nothing
 	// here is predictable.
 
 	// The key here is, once a Goroutine is allowed in, it must report that it's out.
