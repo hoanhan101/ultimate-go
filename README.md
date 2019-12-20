@@ -9,7 +9,7 @@
 [![r/compsci](https://img.shields.io/badge/r/compsci-60%2B-orange)](https://www.reddit.com/r/compsci/comments/cr3jzh/ultimate_go_study_guides_with_heavily_documented/)
 [![r/programming](https://img.shields.io/badge/r/programming-40%2B-orange)](https://www.reddit.com/r/programming/comments/cr3gqu/ultimate_go_study_guides_with_heavily_documented/)
 
-> [Master Coding Interview Problems →](https://www.getrevue.co/profile/hoanhan101)
+> [90+ coding interview problems with detailed solutions, test cases, and program analysis →](https://www.getrevue.co/profile/hoanhan101)
 
 <p align="center">
   <img src="gopher.png" alt="gopher" width="300"/>
