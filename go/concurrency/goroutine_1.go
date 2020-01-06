@@ -17,14 +17,14 @@
 // operating system has to schedule, that's a lot of work. A context switch on on some operating
 // system thread is expensive when the operating system have no clues of what that thread is doing.
 // It have to save all the possible state in order to be able to restore that to exactly the way it
-// was. If there is less threads, each thread can get more time to be reschedule. If the is more
-// thread, each thread have less time over a long period of time.
+// was. If there are fewer threads, each thread can get more time to be rescheduled. If there are more
+// threads, each thread has less time over a long period of time.
 
 // "Less is more" is a really big concept here when we start to write concurrent software. We want to
 // leverage the preemptive scheduler. So the Go's scheduler, the logical processor actually runs in
 // user mode, the mode our application is running at. Because of that, we have to call the Go's
 // scheduler a cooperating scheduler. What brilliant here is the runtime that coordinating the
-// operation. It sill look and feel as a preemptive scheduler up in user land. We will see how "less
+// operation. It still looks and feels as a preemptive scheduler up in user land. We will see how "less
 // is more" concept gets to present itself and we get to do a lot more work with less. Our goal needs
 // to be how much work we get done with the less number of threads.
 
@@ -40,7 +40,7 @@
 // available. Let's say it found 1. It is going to create a logical processor P for that core.
 // Again, the operating system is scheduling things around operating system threads. What this
 // processor P will get is an m, where m stands for machine. It represents an operating system
-// thread that the operating system is going to schedule and allows out code to run.
+// thread that the operating system is going to schedule and allows our code to run.
 
 // The Linux scheduler has a run queue. Threads are placed in run queue in certain cores ore
 // family of cores and those are constantly bounded as threads are running. Go is gonna do the same
@@ -54,7 +54,7 @@
 // Goroutine, can become an independent path of execution that can be scheduled to run on some
 // operating system threads against some cores.
 
-// When we start our Go program, the first thing runtime gonna do is creating that a Go routine
+// When we start our Go program, the first thing runtime gonna do is creating that a Goroutine
 // and putting that in some main LRQ for some P. In our case, we only have 1 P here so we can
 // imagine that Goroutine is attached to P.
 
@@ -67,13 +67,13 @@
 // and can we execute it. If the answer is yes, the operating system starts to execute on some
 // cores there in the hardware.
 
-// As the main Goroutine runs, it might want to creates more path of execution, more Goroutines.
+// As the main Goroutine runs, it might want to create more paths of execution, more Goroutines.
 // When that happens, those Goroutines might find themselves initially in the GRQ. These would be
-// Goroutines that are in runnable states but haven't been assigned to some P yet. Eventually, they
+// Goroutines that are in runnable state but haven't been assigned to some Ps yet. Eventually, they
 // would end up in the LRQ where they're saying they would like some time to execute.
 
 // This queue does not necessarily follow First-In-First-Out protocol. We have to understand that
-// everything here is non-deterministic, just like the operating system scheduler is. We cannot
+// everything here is non-deterministic, just like the operating system scheduler. We cannot
 // predict what the scheduler is gonna do when all things are equal. It is gonna make sure there is
 // a balance. Until we get into orchestration, till we learn how to coordinate these execution of
 // these Goroutines, there is no predictability.
@@ -95,7 +95,7 @@
 
 // There are 4 major places in our code where the scheduler has the opportunity to make a
 // scheduling decision.
-// - The keyword Go that we are going to create Goroutines. That is also an opportunity for the
+// - The keyword go that we are going to create Goroutines. That is also an opportunity for the
 // scheduler to rebalance when it has multiple P.
 // - A system call. These system calls tend to happen all the time already.
 // - A channel operation because there is mutex (blocking call) that we will learn later.
@@ -151,7 +151,7 @@
 // doing more on 1 thread. Let's do so much on this thread we don't need another.
 
 // There is something called a Network poller. It is gonna do all the low level networking
-// asynchronous networking stuff. Our G, if it is gonna do anything like that, might be moved out
+// asynchronous networking stuff. Our G, if it is gonna do anything like that, it might be moved out
 // to the Network poller and then brought back in. From our perspective, here is what we have to
 // remember:
 // The code that we are writing always run on some P against some m. Depending on how many P we
@@ -172,18 +172,18 @@
 //    Gx        |      G2        |
 //              Gx               G1
 
-// Both are are scheduled by the operating system. So now we can have 2 Goroutines running at the
+// Both are scheduled by the operating system. So now we can have 2 Goroutines running at the
 // same time in parallel.
 
 // Let's try another example.
 // --------------------------
 // We have a multiple threaded software. The program launched 2 threads. Even if both threads end
-// up on the same cord, each want to pass a message to each other. What has to happen from the
+// up on the same core, each want to pass a message to each other. What has to happen from the
 // operating system point of view?
 // We have to wait for thread 1 to get scheduled and placed on some cores - a context switch (CTX)
-// has to happen here. While that's happening, thread is is asleep so it's not running at all. From
+// has to happen here. While that's happening, thread is asleep so it's not running at all. From
 // thread 1, we send a message over and want to wait to get a message back. In order to do that,
-// there is another to context switch need to be happened because we can put a different thread on
+// there is another to context switch needs to be happened because we can put a different thread on
 // that core (?). We are waiting for the operating system to schedule thread 2 so we are going to
 // get another context switch, waking up and running, processing the message and sending the
 // message back. On every single message that we are passing back and forth, thread is gonna from
@@ -222,10 +222,10 @@
 // bit to see if there will be another G comes in to get some work done.
 
 // This is how the scheduler work underneath. We have a P, attached to thread m. The operating
-// system will do the scheduling. We don't want any more than we have cores. We don't need any more
-// operating system threads than we have cores. If we have more threads then we have cores, all we
+// system will do the scheduling. We don't want any more than cores we have. We don't need any more
+// operating system threads than cores we have. If we have more threads than cores we have, all we
 // do is putting load on the operating system. We allow the Go's scheduler to make decisions on our
-// Goroutines, keeping the least number of threads we need and hot all time if we have work. The
+// Goroutines, keeping the least number of threads we need and hot all the time if we have work. The
 // Go's scheduler is gonna look and feel preemptive even though we are calling a cooperating
 // scheduler.
 
