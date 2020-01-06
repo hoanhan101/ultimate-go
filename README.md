@@ -11,7 +11,7 @@
 
 > [101+ coding interview problems with detailed solutions, test cases, and program analysis →](https://github.com/hoanhan101/algo)
 
-> [Subscribe for the newsletter here →](https://www.getrevue.co/profile/hoanhan101)
+> [Join my mail list to get latest updates here →](https://tinyletter.com/hoanhan)
 
 <p align="center">
   <img src="gopher.png" alt="gopher" width="300"/>
