@@ -27,6 +27,9 @@ the theories behind the scene.
 
 In the mix, I also include links to other articles that I find helpful.
 
+If you’re interested in getting updates for this, feel free to join my [mail
+list here →](https://tinyletter.com/hoanhan)
+
 ## Table of Contents 
 
 - **Design Philosophy**:
