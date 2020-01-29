@@ -11,7 +11,7 @@
 
 > [101+ coding interview problems with detailed solutions, test cases, and program analysis →](https://github.com/hoanhan101/algo)
 
-> [Join my mail list to get latest updates here →](https://tinyletter.com/hoanhan)
+> [Join my mailing list to get latest updates here →](https://tinyletter.com/hoanhan)
 
 <p align="center">
   <img src="gopher.png" alt="gopher" width="300"/>
@@ -27,7 +27,7 @@ the theories behind the scene.
 
 In the mix, I also include links to other articles that I find helpful.
 
-If you’re interested in getting updates for this, feel free to join my [mail
+If you’re interested in getting updates for this, feel free to join my [mailing 
 list here →](https://tinyletter.com/hoanhan)
 
 ## Table of Contents 
