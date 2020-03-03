@@ -14,9 +14,9 @@
 
 // The operating system is still responsible for operating system threads, scheduling operating
 // system threads efficiently. If we have a 2 core machine and a thousands threads that the
-// operating system has to schedule, that's a lot of work. A context switch on on some operating
+// operating system has to schedule, that's a lot of work. A context switch on some operating
 // system thread is expensive when the operating system have no clues of what that thread is doing.
-// It have to save all the possible state in order to be able to restore that to exactly the way it
+// It has to save all the possible states in order to be able to restore that to exactly the way it
 // was. If there are fewer threads, each thread can get more time to be rescheduled. If there are more
 // threads, each thread has less time over a long period of time.
 
@@ -42,7 +42,7 @@
 // processor P will get is an m, where m stands for machine. It represents an operating system
 // thread that the operating system is going to schedule and allows our code to run.
 
-// The Linux scheduler has a run queue. Threads are placed in run queue in certain cores ore
+// The Linux scheduler has a run queue. Threads are placed in run queue in certain cores or
 // family of cores and those are constantly bounded as threads are running. Go is gonna do the same
 // thing. Go has its run queue as well. It has Global Run Queue (GRQ) and every P has a Local Run
 // Queue (LRQ).
@@ -54,7 +54,7 @@
 // Goroutine, can become an independent path of execution that can be scheduled to run on some
 // operating system threads against some cores.
 
-// When we start our Go program, the first thing runtime gonna do is creating that a Goroutine
+// When we start our Go program, the first thing runtime gonna do is creating a Goroutine
 // and putting that in some main LRQ for some P. In our case, we only have 1 P here so we can
 // imagine that Goroutine is attached to P.
 
@@ -199,7 +199,7 @@
 
 // Let's see what happen when we are using Goroutines, even on a single core.
 // G1 wants to send a message to G2 and we perform a context switch. However, the context here
-// is user's space switch. G1 can be taken of the thread and G2 can be put on the thread. From the
+// is user's space switch. G1 can be taken out of the thread and G2 can be put on the thread. From the
 // operating system point of view, this thread never go to sleep. This thread is always executing
 // and never needed to be context switched out. It is the Go's scheduler that keeps the Goroutines
 // context switched.
