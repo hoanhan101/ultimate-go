@@ -98,8 +98,8 @@ list here →](https://tinyletter.com/hoanhan)
     - [Behavior as context](go/design/error_4.go)
     - [Finding the bug/pitfall of nil value of error interface](go/design/error_5.go)
     - [Wrapping Errors](go/design/error_6.go)
-  - Packaging:
-    [Guideline](https://github.com/ardanlabs/gotraining/blob/master/topics/go/design/packaging/README.md)
+  - Packaging: [Guideline](https://github.com/ardanlabs/gotraining/blob/master/topics/go/design/packaging/README.md)
+  - Dependency management: [Go Modules](https://blog.golang.org/using-go-modules)
 - **Concurrency**
   - **Mechanics**
     - Goroutine: 
