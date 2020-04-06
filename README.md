@@ -36,21 +36,16 @@ list here →](https://tinyletter.com/hoanhan)
   [Guideline](https://github.com/ardanlabs/gotraining/blob/master/topics/go/README.md)
 - **Language Mechanics**
   - **Syntax**
-    - Variable: [Built-in types | Zero value concept | Initialization | Conversion vs Casting
-      ](go/language/variable.go)
+    - Variable: [Built-in types | Zero value concept | Initialization | Conversion vs Casting](go/language/variable.go)
     - Struct: [Initialization | Name type vs Anonymous type](go/language/struct.go)
     - Pointer: 
-      - [Passing by value | Escape analysis | Stack space | Garbage Collection
-        ](go/language/pointer.go)
-      - [Golang's Code Review Receiver
-        Type](https://github.com/golang/go/wiki/CodeReviewComments#receiver-type)
+      - [Passing by value | Escape analysis | Stack space | Garbage Collection](go/language/pointer.go)
+      - [Golang's Code Review Receiver Type](https://github.com/golang/go/wiki/CodeReviewComments#receiver-type)
     - Constant: [Initialization | iota](go/language/constant.go)
     - Function: [Initialization](go/language/function.go)
   - **Data Structures**
-    - Array: [CPU Cache | TLB | Initialization | Iteration | Type array | Contiguous memory
-      allocation](go/language/array.go)
-    - Slice: [Initialization | Length vs Capacity | Reference Type | Appending | Slice of Slice |
-      Copy of Slice | UTF-8](go/language/slice.go)
+    - Array: [CPU Cache | TLB | Initialization | Iteration | Type array | Contiguous memory allocation](go/language/array.go)
+    - Slice: [Initialization | Length vs Capacity | Reference Type | Appending | Slice of Slice | Copy of Slice | UTF-8](go/language/slice.go)
     - Map: [Initialization | Iteration | Deleting | Finding | Restriction ](go/language/map.go)
   - **Decoupling**
     - Method: 
@@ -115,9 +110,7 @@ list here →](https://tinyletter.com/hoanhan)
     - Channel: 
       - [Guideline](https://github.com/ardanlabs/gotraining/tree/master/topics/go#concurrent-software-design)
       - [Language Mechanics | Unbuffered channel: Signaling with(out) data](go/concurrency/channel_1.go)
-      - [Unbuffered channel: Double signal | Buffered channel: Close and range | Unbuffered
-        channel: select and receive | Unbuffered channel: select and send | Buffered channel:
-        Select and drop](go/concurrency/channel_2.go)
+      - [Unbuffered channel: Double signal | Buffered channel: Close and range | Unbuffered channel: select and receive | Unbuffered channel: select and send | Buffered channel: Select and drop](go/concurrency/channel_2.go)
       - [Unbuffered channel (Tennis match)](go/concurrency/channel_3.go)
       - [Unbuffered channel (Replay race)](go/concurrency/channel_4.go)
       - [Buffered channel: Fan Out](go/concurrency/channel_5.go)
@@ -148,22 +141,14 @@ list here →](https://tinyletter.com/hoanhan)
   - Profiling
     - Stack Trace: [Review](go/profiling/stack_trace_1.go) | [Packing](go/profiling/stack_trace_2.go)
     - GODEBUG: [Memory Tracing](go/profiling/memory_tracing.go)
-- **Packages**
-  - Context
-  - Encoding
-  - IO
-  - Logging
-  - Reflection
 
-## References
+## For more resources:
 
-- [Ultimate Go
-  Programming](https://www.safaribooksonline.com/library/view/ultimate-go-programming/9780134757476/)
-- [ardanlabs/gotraining/topics/courses/go
-  ](https://github.com/ardanlabs/gotraining/blob/master/topics/courses/go/README.md)
-- [Computer Systems: A Programmer's
-  Perspective](https://www.amazon.com/Computer-Systems-Programmers-Perspective-3rd/dp/013409266X)
+- [Ultimate Go Programming](https://www.safaribooksonline.com/library/view/ultimate-go-programming/9780134757476/)
+- [ardanlabs/gotraining/topics/courses/go](https://github.com/ardanlabs/gotraining/blob/master/topics/courses/go/README.md)
+- [Computer Systems: A Programmer's Perspective](https://www.amazon.com/Computer-Systems-Programmers-Perspective-3rd/dp/013409266X)
 - [Free Gophers Pack](https://github.com/MariaLetta/free-gophers-pack)
+- [Thoughts on Go performance optimization](https://github.com/dgryski/go-perfbook)
 
 ## Stargazers over time
 
