@@ -49,7 +49,7 @@ func main() {
 	// points to and make sure that notify leverages its value semantic and works on its own copy.
 
 	// Similarly, bill has the type user but still be able to call changeEmail. Go will take the
-	// address of bill and do the rest for you: (*bill).changeEmail().
+	// address of bill and do the rest for you: (&bill).changeEmail().
 
 	// Create a slice of user values with two users.
 	users := []user{
