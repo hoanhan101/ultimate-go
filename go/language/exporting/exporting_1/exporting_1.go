@@ -7,7 +7,7 @@ package main
 import (
 	"fmt"
 
-	// This is a relative patth to a physical location on our disk - relative to GOPATH
+	// This is a relative path to a physical location on our disk - relative to GOPATH.
 	"github.com/hoanhan101/ultimate-go/go/language/exporting/exporting_1/counters"
 )
 
