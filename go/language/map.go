@@ -79,7 +79,7 @@ func main() {
 	// This is a second way we can define users. We can use an existing type and use it as a base for
 	// another type. These are two different types. There is no relationship here.
 	// However, when we try use it as a key, like: u := make(map[users]int)
-	// the complier says we cannot use that: "invalid map key type users"
+	// the compiler says we cannot use that: "invalid map key type users"
 	// The reason is: whatever we use for the key, the value must be comparable. We have to use it
 	// in some sort of boolean expression in order for the map to create a hash value for it.
 }

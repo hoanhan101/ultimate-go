@@ -1,5 +1,5 @@
 // Constant are not variables.
-// Contants have a parallel type system all to themselves. The minimum precision for constant is
+// Constants have a parallel type system all to themselves. The minimum precision for constant is
 // 256 bit. They are considered to be mathematically exact.
 // Constants only exist at complied time.
 
@@ -14,7 +14,7 @@ func main() {
 
 	// Constant can be typed or untyped.
 	// When it is untyped, we consider it as a kind.
-	// They are implicitly converted by the complier.
+	// They are implicitly converted by the compiler.
 
 	// Untyped Constants.
 	const ui = 12345    // kind: integer

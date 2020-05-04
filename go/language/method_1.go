@@ -18,7 +18,7 @@ func (u user) notify() {
 }
 
 // changeEmail implements a method with a pointer receiver: u of type pointer user
-// Using the pointer reciever, the method operates on shared access.
+// Using the pointer receiver, the method operates on shared access.
 func (u *user) changeEmail(email string) {
 	u.email = email
 }

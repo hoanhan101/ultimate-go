@@ -37,7 +37,7 @@ func (c *AppError) Error() string {
 func main() {
 	// Make the function call and validate the error.
 
-	// firtCall calls secondCall calls thirdCall then results in AppError.
+	// firstCall calls secondCall calls thirdCall then results in AppError.
 	// Start down the call stack, in thirdCall, where the error occurs. The is the root of the
 	// error. We return it up the call stack in our traditional error interface value.
 	// Back to secondCall, we get the interface value and there is a concrete type stored inside

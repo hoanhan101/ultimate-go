@@ -15,7 +15,7 @@ import (
 // publisher is an interface to allow this package to mock the pubsub package.
 // When we are writing our applications, declare our own interface that map out all the APIs call
 // we need for the APIs. The concrete types APIs in the previous files satisfy it out of the box.
-// We can write the entire application with mocking decoupling from conrete implementations.
+// We can write the entire application with mocking decoupling from concrete implementations.
 type publisher interface {
 	Publish(key string, v interface{}) error
 	Subscribe(key string) error

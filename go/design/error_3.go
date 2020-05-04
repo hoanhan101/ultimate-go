@@ -101,5 +101,5 @@ func Unmarshal(data []byte, v interface{}) error {
 // that's gonna create a cascading effect all the way through our code. We are no longer protected
 // by the decoupling of the error interface.
 
-// This sometime has to happen. Can we do something differnt not to lose the decoupling. This is
+// This sometime has to happen. Can we do something different not to lose the decoupling. This is
 // where the idea of behavior as context comes in.

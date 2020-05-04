@@ -149,7 +149,7 @@ func main() {
 	// The length is slice3 is 2 and capacity is 6.
 	// Parameters are [starting_index : (starting_index + length)]
 	// By looking at the output, we can see that they are sharing the same backing array.
-	// Thes slice headers get to stay on the stack when we use these value semantics. Only the
+	// These slice headers get to stay on the stack when we use these value semantics. Only the
 	// backing array that needed to be on the heap.
 	slice3 := slice2[2:4]
 
@@ -212,7 +212,7 @@ func main() {
 
 	// Append a new value to the slice. This line of code raises a red flag.
 	// We have x is a slice with length 7, capacity 7. Since the length and capacity is the same,
-	// append doubles its size then copy values over. x nows points to diffrent memeory block and
+	// append doubles its size then copy values over. x nows points to different memory block and
 	// has a length of 8, capacity of 14.
 	x = append(x, 800)
 

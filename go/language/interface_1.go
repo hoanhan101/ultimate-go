@@ -37,7 +37,7 @@ type reader interface {
 // It is a concrete type because it has the method read below. It is identical to the method in
 // the reader interface. Because of this, we can say the concrete type file implements the reader
 // interface using a value receiver.
-// There is no fancy syntax. The complier can automatically recognize the implementation here.
+// There is no fancy syntax. The compiler can automatically recognize the implementation here.
 
 // ------------
 // Relationship

@@ -86,7 +86,7 @@ func increment2(inc *int) {
 }
 
 // stayOnStack shows how the variable does not escape.
-// Since we know the size of the user value at compiled time, the complier will put this on a stack
+// Since we know the size of the user value at compiled time, the compiler will put this on a stack
 // frame.
 func stayOnStack() user {
 	// In the stayOnStack stack frame, create a value and initialize it.
@@ -152,7 +152,7 @@ func escapeToHeap() *user {
 // cost.
 
 // Because stack can grow, no Goroutine can have a pointer to some other Goroutine stack.
-// There would be too much overhead for complier to keep track of every pointer. The latency will
+// There would be too much overhead for compiler to keep track of every pointer. The latency will
 // be insane.
 // -> The stack for a Goroutine is only for that Goroutine only. It cannot be shared between
 // Goroutine.
