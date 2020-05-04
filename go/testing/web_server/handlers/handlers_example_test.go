@@ -11,7 +11,7 @@
 // our API. More interestingly, Examples are not only for documentation but they can also be tests.
 // For them to be tests, we need to add a comment at the end of the functions: one is Output and
 // one is expected output. If we change the expected output to be something wrong then, the
-// complier will tell us when we run the test. Below is an example.
+// compiler will tell us when we run the test. Below is an example.
 
 // Example tests are really powerful. They give users examples how to use the API and validate that
 // the APIs and examples are working.
