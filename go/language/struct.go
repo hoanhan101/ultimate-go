@@ -84,7 +84,7 @@ func main() {
 
 	// If we have two name type identical struct, we can't assign one to another.
 	// For example, example1 and example2 are identical struct, var ex1 example1, var ex2 example2.
-	// ex1 = ex2 is not allowed. We have to explicitly say that ex1 = example2(ex2) by performing a
+	// ex1 = ex2 is not allowed. We have to explicitly say that ex1 = example1(ex2) by performing a
 	// conversion.
 	// However, if ex is a value of identical anonymous struct type (like e3 above), then it is possible to
 	// assign ex1 = ex
