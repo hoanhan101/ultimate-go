@@ -18,7 +18,7 @@ func main() {
 	selectRecv()
 
 	fmt.Printf("\n=> Select and send\n")
-	selectRecv()
+	selectSend()
 
 	fmt.Printf("\n=> Select and drop\n")
 	selectDrop()
