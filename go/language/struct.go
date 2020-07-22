@@ -46,7 +46,7 @@ func main() {
 	// type example struct {
 	//     counter int64
 	//     pi      float32
-	//     float   bool
+	//     flag    bool
 	// }
 
 	// Declare a variable of type example and init using a struct literal.
