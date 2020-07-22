@@ -1,7 +1,7 @@
-// Constant are not variables.
+// Constants are not variables.
 // Constants have a parallel type system all to themselves. The minimum precision for constant is
 // 256 bit. They are considered to be mathematically exact.
-// Constants only exist at complied time.
+// Constants only exist at compile time.
 
 package main
 
@@ -35,9 +35,9 @@ func main() {
 
 	// Constant arithmetic supports different kinds.
 	// Kind Promotion is used to determine kind in these scenarios.
-	// All of this happen implicitly.
+	// All of this happens implicitly.
 
-	// Variable answer will of type float64.
+	// Variable answer will be of type float64.
 	var answer = 3 * 0.333 // KindFloat(3) * KindFloat(0.333)
 
 	fmt.Println(answer)
