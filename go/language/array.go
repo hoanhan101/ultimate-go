@@ -48,9 +48,9 @@
 // Back to the different granularity, the caching system moves data in and out the hardware at 64
 // bytes at a time. However, the operating system manages memory by paging its 4K (traditional page
 // size for an operating system).
-// TLB: For every page that we are managing, let's take our virtual memory addresses because that
-// that we use (softwares run virtual addresses, its sandbox, that is how we use/share physical
-// memory) and map it to the right page and offset for that physical memory.
+// TLB: For every page that we are managing, let's take our virtual memory addresses that we use
+// (softwares run virtual addresses, its sandbox, that is how we use/share physical memory)
+// and map it to the right page and offset for that physical memory.
 
 // A miss on the TLB can be worse than just the cache miss alone.
 // The LinkedList is somewhere in between is because the chance of multiple nodes being on the same
