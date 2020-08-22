@@ -10,17 +10,17 @@
 // caches" -> access to main memory is incredibly slow; practically speaking it might not even be there.
 
 // How do we write code that can be sympathetic with the caching system to make sure that
-// we don't have a cache miss or at least, we minimalize cache misses to our fullest potential?
+// we don't have a cache miss or at least, we minimize cache misses to our fullest potential?
 
 // Processor has a Prefetcher. It predicts what data is needed ahead of time.
 // There are different granularity depending on where we are on the machine.
 // Our programming model uses a byte. We can read and write to a byte at a time. However, from the
 // caching system POV, our granularity is not 1 byte. It is 64 bytes, called a cache line. All
-// memory us junked up in this 64 bytes cache line.
+// memory is junked up in this 64 bytes cache line.
 
 // Since the caching mechanism is complex, Prefetcher tries to hide all the latency from us.
 // It has to be able to pick up on predictable access pattern to data.
-// -> We need to write code that create predictable access pattern to data
+// -> We need to write code that creates predictable access pattern to data
 
 // One easy way is to create a contiguous allocation of memory and to iterate over them.
 // The array data structure gives us ability to do so.
@@ -55,7 +55,7 @@
 // A miss on the TLB can be worse than just the cache miss alone.
 // The LinkedList is somewhere in between is because the chance of multiple nodes being on the same
 // page is probably pretty good. Even though we can get cache misses because cache lines aren't
-// necessary in the distance that is predictable, we probably not have so many TLB cache misses.
+// necessary in the distance that is predictable, we probably don't have so many TLB cache misses.
 // In the Column Traverse, not only we have cache misses, we probably have a TLB cache miss on
 // every access as well.
 
