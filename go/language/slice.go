@@ -212,7 +212,7 @@ func main() {
 
 	// Append a new value to the slice. This line of code raises a red flag.
 	// We have x is a slice with length 7, capacity 7. Since the length and capacity is the same,
-	// append doubles its size then copy values over. x nows points to different memory block and
+	// append doubles its size then copy values over. x now points to different memory block and
 	// has a length of 8, capacity of 14.
 	x = append(x, 800)
 
