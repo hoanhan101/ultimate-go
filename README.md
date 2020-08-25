@@ -1,4 +1,4 @@
-# Ultimate Go study guide
+# Ultimate Go
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/hoanhan101/ultimate-go)
 ](https://goreportcard.com/report/github.com/hoanhan101/ultimate-go)
@@ -19,18 +19,33 @@
   <img src="gopher.png" alt="gopher" width="300"/>
 </p>
 
-## Motivation
+## Context
 
-This repo contains my notes on learning Go and computer systems. Different people have different
-learning style. For me, I learn best by doing and walking through examples. Hence, I am trying to
-take notes carefully and comment directly on the source code, rather than writing up Markdown
-files. That way, I can understand every single line of code as I am reading and also be mindful of
-the theories behind the scene.
+*Last updates is on August 2020*
 
-In the mix, I also include links to other articles that I find helpful.
+Hi friends,
 
-If you’re interested in getting updates for this, feel free to join my [mailing 
-list here →](https://tinyletter.com/hoanhan)
+Almost a year ago, in August 2019, I shared this Ultimate Go project on GitHub, and surprisingly, it got a lot of attention from the community.
+Fast forward to August 2020, it now has over 11K stars, 900 folks with the help of more than 20 contributors.
+
+The project is a collection of my notes while learning Go programming language. Different people have different learning styles.
+For me, I learn best by doing and walking through examples. That said, I take notes carefully, comment directly on the source code
+to make sure that I understand every single line of code as I am reading and also be mindful of the theories behind the scene.
+
+As Ultimate Go keeps growing, there’s one issue that keeps coming up. That’s about the format of the project. Specifically,
+many people have requested an eBook version where the content is more streamlined and they can read it at their convenience.
+
+That’s when The Ultimate Go Book is born. For the last 3 months or so, I have spent most of my free time putting together
+everything here into a 200-page book. Other than all the good stuff from Ultimate Go, two new and better things in this version are:
+- Follow-along code input and output.
+- Diagrams.
+
+Hope it makes your journey of learning Go a bit easier. And again, thank you all for your support. I really appreciate it.
+
+**Here’s the link for the book: <https://gum.co/bpUYF>.**
+
+Note that I’ve made it free, though I would really appreciate your support.
+Regardless, you will receive the book in 2 different formats: PDF and ePub.
 
 ## Table of Contents 
 
