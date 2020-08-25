@@ -157,7 +157,7 @@ Regardless, you will receive the book in 2 different formats: PDF and ePub.
     - Stack Trace: [Review](go/profiling/stack_trace_1.go) | [Packing](go/profiling/stack_trace_2.go)
     - GODEBUG: [Memory Tracing](go/profiling/memory_tracing.go)
 
-## For more resources:
+## References & resources:
 
 - [Ultimate Go Programming](https://www.safaribooksonline.com/library/view/ultimate-go-programming/9780134757476/)
 - [ardanlabs/gotraining/topics/courses/go](https://github.com/ardanlabs/gotraining/blob/master/topics/courses/go/README.md)
