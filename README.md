@@ -21,9 +21,7 @@
 
 ## Context
 
-*Last updates is on August 2020*
-
-Hi friends,
+> Last updates is on August 2020.
 
 Almost a year ago, in August 2019, I shared this Ultimate Go project on GitHub, and surprisingly, it got a lot of attention from the community.
 Fast forward to August 2020, it now has over 11K stars, 900 folks with the help of more than 20 contributors.
