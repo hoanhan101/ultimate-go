@@ -20,6 +20,12 @@ import (
 	"testing"
 )
 
+// These constant gives us checkboxes for visualization.
+const (
+	succeed = "\u2713"
+	failed  = "\u2717"
+)
+
 // feed is mocking the XML document we expect to receive.
 // Notice that we are using ` instead of " so we can reserve special characters.
 var feed = `<?xml version="1.0" encoding="UTF-8"?>

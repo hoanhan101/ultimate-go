@@ -3,7 +3,7 @@
 // ----------------
 
 // There are times when we have a shared resource where we want many Goroutines reading it.
-// Occasionally, one Goroutine can come in and make change to the resource. When that happens, everybody 
+// Occasionally, one Goroutine can come in and make change to the resource. When that happens, everybody
 // has to stop reading. It doesn't make sense to synchronize reads in this type of scenario
 // because we are just adding latency to our software for no reason.
 

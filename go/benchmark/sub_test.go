@@ -16,6 +16,8 @@ import (
 	"testing"
 )
 
+var gs string
+
 // BenchmarkSprint tests all the Sprint related benchmarks as sub benchmarks.
 func BenchmarkSprintSub(b *testing.B) {
 	b.Run("none", benchSprint)

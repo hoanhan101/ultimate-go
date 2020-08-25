@@ -11,6 +11,12 @@ import (
 	"testing"
 )
 
+// These constant gives us checkboxes for visualization.
+const (
+	succeed = "\u2713"
+	failed  = "\u2717"
+)
+
 // TestSub validates the http Get function can download content and
 // handles different status conditions properly.
 func TestSub(t *testing.T) {
@@ -19,7 +25,7 @@ func TestSub(t *testing.T) {
 		url        string
 		statusCode int
 	}{
-		{"statusok", "https://www.goinggo.net/post/index.xml", http.StatusOK},
+		{"statusok", "https://www.google.com/", http.StatusOK},
 		{"statusnotfound", "http://rss.cnn.com/rss/cnn_topstorie.rss", http.StatusNotFound},
 	}
 

@@ -13,6 +13,12 @@ import (
 	"testing"
 )
 
+// These constant gives us checkboxes for visualization.
+const (
+	succeed = "\u2713"
+	failed  = "\u2717"
+)
+
 // TestTable validates the http Get function can download content and
 // handles different status conditions properly.
 func TestTable(t *testing.T) {
@@ -22,7 +28,7 @@ func TestTable(t *testing.T) {
 		url        string
 		statusCode int
 	}{
-		{"https://www.goinggo.net/post/index.xml", http.StatusOK},
+		{"https://www.google.com/", http.StatusOK},
 		{"http://rss.cnn.com/rss/cnn_topstorie.rss", http.StatusNotFound},
 	}
 

@@ -21,6 +21,7 @@ func (u user) notify() {
 // Using the pointer receiver, the method operates on shared access.
 func (u *user) changeEmail(email string) {
 	u.email = email
+	fmt.Printf("Changed User Email To %s\n", email)
 }
 
 // These 2 methods above are just for studying the difference between a value receiver and a

@@ -52,7 +52,7 @@ const (
 // We are also using the artificial block between a long Log function.
 // They help with readability.
 func TestBasic(t *testing.T) {
-	url := "https://www.goinggo.net/post/index.xml"
+	url := "https://www.google.com/"
 	statusCode := 200
 
 	t.Log("Given the need to test downloading content.")
