@@ -32,7 +32,7 @@ func main() {
 	ad := admin{
 		person: user{
 			name:  "Hoanh An",
-			email: "hoanhan@bennington.edu",
+			email: "hoanhan101@gmail.com",
 		},
 		level: "superuser",
 	}

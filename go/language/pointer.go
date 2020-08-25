@@ -92,7 +92,7 @@ func stayOnStack() user {
 	// In the stayOnStack stack frame, create a value and initialize it.
 	u := user{
 		name:  "Hoanh An",
-		email: "hoanhan@bennington.edu",
+		email: "hoanhan101@gmail.com",
 	}
 
 	// Take the value and return it, pass back up to main stack frame.
@@ -134,7 +134,7 @@ func stayOnStack() user {
 func escapeToHeap() *user {
 	u := user{
 		name:  "Hoanh An",
-		email: "hoanhan@bennington.edu",
+		email: "hoanhan101@gmail.com",
 	}
 
 	return &u

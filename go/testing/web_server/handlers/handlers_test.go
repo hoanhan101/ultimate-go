@@ -76,10 +76,10 @@ func TestSendJSON(t *testing.T) {
 				t.Errorf("\t%s\tShould have \"Hoanh An\" for Name in the response : %q", failed, u.Name)
 			}
 
-			if u.Email == "hoanhan@bennington.edu" {
-				t.Logf("\t%s\tShould have \"hoanhan@bennington.edu\" for Email in the response.", succeed)
+			if u.Email == "hoanhan101@gmail.com" {
+				t.Logf("\t%s\tShould have \"hoanhan101@gmail.com\" for Email in the response.", succeed)
 			} else {
-				t.Errorf("\t%s\tShould have \"hoanhan@bennington.edu\" for Email in the response : %q", failed, u.Email)
+				t.Errorf("\t%s\tShould have \"hoanhan101@gmail.com\" for Email in the response : %q", failed, u.Email)
 			}
 		}
 	}

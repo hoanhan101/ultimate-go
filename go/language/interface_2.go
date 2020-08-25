@@ -156,7 +156,7 @@ func main() {
 
 	// Change the name and email on the user value.
 	u.name = "Hoanh An"
-	u.email = "hoanhan@bennington.edu"
+	u.email = "hoanhan101@gmail.com"
 
 	// Iterate over the slice of entities and call print against the copied interface value.
 	for _, e := range entities {
