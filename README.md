@@ -24,7 +24,7 @@
 > Last updates is on August 2020.
 
 A year ago, in August 2019, I shared this Ultimate Go Study Guide project on GitHub, and surprisingly, it got a lot of attention from the community.
-Fast forward to August 2020, it now has over 11K stars, 900 folks with the help of more than 20 contributors.
+Fast forward to August 2020, it now has over 11K stars, 900 forks with the help of more than 20 contributors.
 
 The project is a collection of my notes while learning Go programming language from [Ardan Labs's Ultimate Go course](https://www.oreilly.com/library/view/ultimate-go-programming/9780134757476/).
 Honestly, I couldn’t thank Bill Kennedy and the Ardan Labs team enough for open-sourcing this wonderful material. They’ve done such great jobs putting together their knowledge, insights into their courses and making them available to the public.
