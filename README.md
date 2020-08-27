@@ -23,7 +23,7 @@
 
 > Last updates is on August 2020.
 
-Almost a year ago, in August 2019, I shared this Ultimate Go project on GitHub, and surprisingly, it got a lot of attention from the community.
+Almost a year ago, in August 2019, I shared this Ultimate Go Study Guide project on GitHub, and surprisingly, it got a lot of attention from the community.
 Fast forward to August 2020, it now has over 11K stars, 900 folks with the help of more than 20 contributors.
 
 The project is a collection of my notes while learning Go programming language from [Ardan Labs's Ultimate Go course](https://www.oreilly.com/library/view/ultimate-go-programming/9780134757476/).
@@ -33,10 +33,10 @@ Different people have different learning styles. For me, I learn best by doing a
 That said, I take notes carefully, comment directly on the source code to make sure that I understand every single line
 of code as I am reading and also be mindful of the theories behind the scene.
 
-As Ultimate Go keeps growing, there’s one issue that keeps coming up. That’s about the format of the project. Specifically,
+As Ultimate Go Study Guide keeps growing, there’s one issue that keeps coming up. That’s about the format of the project. Specifically,
 many people have requested an eBook version where the content is more streamlined and they can read it at their convenience.
 
-That’s when The Ultimate Go Book is born. For the last 3 months or so, I have spent most of my free time putting together
+That’s where Ultimate Go Study Guide eBook version comes from. For the last 3 months or so, I have spent most of my free time putting together
 everything here into a 200-page book. Other than all the good stuff from Ultimate Go, two new and better things in this version are:
 - Follow-along code input and output.
 - Diagrams.
