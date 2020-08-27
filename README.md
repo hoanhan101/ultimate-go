@@ -1,4 +1,4 @@
-# Ultimate Go Study Guide
+# The Ultimate Go Study Guide
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/hoanhan101/ultimate-go)
 ](https://goreportcard.com/report/github.com/hoanhan101/ultimate-go)
@@ -9,7 +9,7 @@
 [![r/compsci](https://img.shields.io/badge/r/compsci-60%2B-orange)](https://www.reddit.com/r/compsci/comments/cr3jzh/ultimate_go_study_guides_with_heavily_documented/)
 [![r/programming](https://img.shields.io/badge/r/programming-40%2B-orange)](https://www.reddit.com/r/programming/comments/cr3gqu/ultimate_go_study_guides_with_heavily_documented/)
 
-> [Ultimate Go Study Guide eBook version →](https://gum.co/bpUYF)
+> [The Ultimate Go Study Guide eBook version →](https://gum.co/bpUYF)
 
 > [101+ coding interview problems with detailed solutions, test cases, and program analysis →](https://github.com/hoanhan101/algo)
 
@@ -36,7 +36,7 @@ of code as I am reading and also be mindful of the theories behind the scene.
 As Ultimate Go Study Guide keeps growing, there’s one issue that keeps coming up. That’s about the format of the project. Specifically,
 many people have requested an eBook version where the content is more streamlined and they can read it at their convenience.
 
-So, here comes the Ultimate Go Study Guide eBook version. For the last 3 months or so, I have spent most of my free time putting together
+So, here comes The Ultimate Go Study Guide eBook version. For the last 3 months or so, I have spent most of my free time putting together
 everything here into a 200-page book. Other than all the good stuff from Ultimate Go, two new and better things in this version are:
 - Follow-along code input and output.
 - Diagrams.
