@@ -36,7 +36,7 @@ of code as I am reading and also be mindful of the theories behind the scene.
 As Ultimate Go Study Guide keeps growing, there’s one issue that keeps coming up. That’s about the format of the project. Specifically,
 many people have requested an eBook version where the content is more streamlined and they can read it at their convenience.
 
-That’s where Ultimate Go Study Guide eBook version comes from. For the last 3 months or so, I have spent most of my free time putting together
+So, here comes the Ultimate Go Study Guide eBook version. For the last 3 months or so, I have spent most of my free time putting together
 everything here into a 200-page book. Other than all the good stuff from Ultimate Go, two new and better things in this version are:
 - Follow-along code input and output.
 - Diagrams.
