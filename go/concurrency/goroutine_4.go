@@ -3,7 +3,7 @@
 // --------------------------
 
 // This programs show how Goroutines run in parallel.
-// We are going to have 2 P with 2 m, and 2 Gorouines running in parallel on each m.
+// We are going to have 2 P with 2 m, and 2 Goroutines running in parallel on each m.
 // This is still the same program that we are starting with. The only difference is that we are
 // getting rid of the lowercase and uppercase function and putting their code directly inside Go's
 // anonymous functions.
