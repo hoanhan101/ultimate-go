@@ -28,7 +28,7 @@ func main() {
 
 	// Rule 1:
 	// Depending on the size a particular value, Go determines the alignment we need. Every 2 bytes
-	// value must follow a 2 bytes boundary. Since the bool value is only 1 byte and start at
+	// value must fall on a 2 bytes boundary. Since the bool value is only 1 byte and start at
 	// address 0, then the next int16 must start on address 2. The byte at address that get skipped
 	// over becomes a 1 byte padding. Similarly, if it is a 4 bytes value then we will have a 3
 	// bytes padding value.
