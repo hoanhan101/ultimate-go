@@ -70,14 +70,14 @@ func TestParallelize(t *testing.T) {
 		url        string
 		statusCode int
 	}{
-		{"statusok", "https://www.goinggo.net/post/index.xml", http.StatusOK},
+		{"statusok", "https://www.google.com/", http.StatusOK},
 		{"statusnotfound", "http://rss.cnn.com/rss/cnn_topstorie.rss", http.StatusNotFound},
 	}
 
 	t.Log("Given the need to test downloading different content.")
 	{
 		for i, tt := range tests {
-			tt := tt
+			i, tt := i, tt
 			tf := func(t *testing.T) {
 				// The only difference here is that we call Parallel function inside each of these
 				// individual sub test function.
