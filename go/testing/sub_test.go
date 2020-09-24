@@ -77,6 +77,7 @@ func TestParallelize(t *testing.T) {
 	t.Log("Given the need to test downloading different content.")
 	{
 		for i, tt := range tests {
+			tt := tt
 			tf := func(t *testing.T) {
 				// The only difference here is that we call Parallel function inside each of these
 				// individual sub test function.
