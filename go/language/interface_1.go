@@ -20,8 +20,7 @@ type reader interface {
 	// slice of byte and an error, like so: read(i int) ([]byte, error) (2).
 	// Why do we choose the other one instead?
 	// Every time we call (2), it will cost an allocation because the method would have to
-	// allocate a slice of some unknown type and share it back up the call stack. The method
-	// would have to allocate a slice of some unknown type and share it back up the call stack. The
+	// allocate a slice of some unknown type and share it back up the call stack. The
 	// backing array for that slice has to be an allocation. But if we stick with (1), the caller
 	// is allocating a slice. Even the backing array for that is ended up on a heap, it is just 1
 	// allocation. We can call this 10000 times and it is still 1 allocation.
