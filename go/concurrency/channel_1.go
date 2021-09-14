@@ -19,7 +19,7 @@
 // the other side of that unbuffered channel receive the data.
 
 // This is how the unbuffered channel going to work.
-// There is gonna a Goroutine comes to the channel. The channel wants to signal with some piece of
+// There is a Goroutine coming to the channel. The Goroutine wants to signal with some piece of
 // data. It is gonna put the data right there in the channel. However, the data is locked in and
 // cannot move because channel has to know if there is another Goroutine is on the other side to
 // receive it. Eventually a Goroutine come and say that it want to receive the data. Both of
@@ -45,12 +45,12 @@
 // amount of latencies on any given send or receive.
 
 // Back to the previous example, we replace the unbuffered channel with a buffered channel. We are
-// gonna a buffered channel of just 1. It means there is a space in this channel for 1 piece of
+// having a buffered channel of just 1 in size. It means there is a space in this channel for 1 piece of
 // data that we are using the signal and we don't have to wait for the other side to get it. So
 // now a Goroutine comes in, put the data in and then move away immediately. In other word, the
-// send is happening before the receive. All the sending Goroutine know is that it issues the
+// sending is happening before the receiving. All the sending Goroutine know is that it issues the
 // signal, put that data but has no clue when the signal is going to be received. Now hopefully a
-// Goroutine comes in. It see that there is a data there, receive it and move on.
+// Goroutine comes in. It sees that there is a data there, receive it and move on.
 
 //  G                      G
 //  |      Channel (1)     |
@@ -59,14 +59,14 @@
 //  |      ----------      |
 //  |                      |
 
-// We use a buffered of 1 when dealing with these type of latency. We may need buffers that are
+// We use a buffered channel of 1 when dealing with these type of latency. We may need buffers that are
 // larger but there are some design rules that we are gonna learn later on we use buffers that are
 // greater than 1. But if we are in a situation where we can have these sends coming in and they
 // could potentially be locked then we have to think again: if the channel of 1 is fast enough to
 // reduce the latency that we are dealing with. Because what's gonna happen is the following:
 // What we are hoping is, the buffered channel is always empty every time we perform a send.
 
-// Buffered channel ares not for performance. What the buffered channel need to be used for is
+// Buffered channels are not for performance. What the buffered channel need to be used for is
 // continuity, to keep the wheel moving. One thing we have to understand is that, everybody can
 // write a piece of software that works when everything is going well. When things are going
 // bad, it's where the architecture and engineer really come in. Our software doesn't enclose and
@@ -122,7 +122,7 @@ func basicSendRecv() {
 
 	// This is a receive: also an arrow but it is a unary operation where it is attached to the
 	// left hand side of the channel to show that is coming out.
-	// We are now have a unbuffered channel where the send and receive have to come together. We
+	// We are now have an unbuffered channel where the send and receive have to come together. We
 	// also know that the signal has been received because the receive happens first.
 	// Both are gonna block until both come together so the exchange can happen.
 	fmt.Println(<-ch)

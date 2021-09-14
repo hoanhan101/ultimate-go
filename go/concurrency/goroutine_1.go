@@ -112,7 +112,7 @@
 //      G1        |
 //                G2
 
-// Let's say G1 decides to open up a file. Opening up a file can microsecond or 10 milliseconds. We
+// Let's say G1 decides to open up a file. Opening up a file can take microsecond or 10 milliseconds. We
 // don't really know. If we allow this Goroutine to block this operating system thread while we
 // open up that file, we are not getting more work done. In this scenario here, having a single P,
 // we are single threaded software application. All Goroutines only execute on the m attached to
