@@ -3,7 +3,7 @@
 // ---------------
 
 // All of our tests must have the format <filename>_test.go.
-// Otherwise, the testing tool is not gonna fine the tests.
+// Otherwise, the testing tool is not gonna find the tests.
 
 // Test files are not compiled into our final binary.
 
@@ -36,10 +36,10 @@ const (
 
 // When writing test, we want to focus on usability first. We must write it the same way as we
 // would write it in production.
-// We also want the verbosity of tests so we are 3 different methods of t: Log or Logf, Fatal or
-// Fatalf, Error or Error f. That is the core APIs for testing.
+// We also want the verbosity of tests so there are 3 different methods of t: Log or Logf, Fatal or
+// Fatalf, Error or Error f. These are the core APIs for testing.
 // Log: Write documentation out into the log output.
-// Error: Write documentation and also say that this test is failed but we are continue
+// Error: Write documentation and also say that this test is failed but we are continuing
 // moving forward to execute code in this test.
 // Fatal: Similarly, document that this test is failed but we are done. We move on to the next
 // test function.

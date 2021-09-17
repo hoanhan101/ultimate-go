@@ -4,7 +4,7 @@
 
 // This is another type of test in Go. Examples are both tests and documentations.
 // If we execute "godoc -http :3000", Go will generate for us a server that present the
-// documentation of our code. The interface will looks like the official golang interface, but then
+// documentation of our code. The interface looks like the official golang interface, but the
 // inside Packages section are our local packages.
 
 // Example functions are a little bit more concrete in term of showing people how to use
